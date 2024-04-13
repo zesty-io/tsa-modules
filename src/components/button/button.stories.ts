@@ -16,7 +16,7 @@ const meta = {
     onClick: { action: 'onClick', type: 'function' },
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'dark', 'light'],
+      options: ['primary', 'success', 'danger', 'info', 'warning', 'dark', 'light'],
       type: 'string',
       defaultValue: { summary: 'primary' }
     },
@@ -34,6 +34,40 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<ButtonProps>;
+
+export const Primary: Story = {
+  args: {
+    label: 'Button',
+    variant: 'primary'
+  }
+};
+export const Success: Story = {
+  args: {
+    label: 'Button',
+    variant: 'success'
+  }
+};
+
+export const Danger: Story = {
+  args: {
+    label: 'Button',
+    variant: 'danger'
+  }
+};
+
+export const Info: Story = {
+  args: {
+    label: 'Button',
+    variant: 'info'
+  }
+};
+
+export const Warning: Story = {
+  args: {
+    label: 'Button',
+    variant: 'warning'
+  }
+};
 
 export const Light: Story = {
   args: {

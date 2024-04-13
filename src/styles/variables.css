@@ -9,9 +9,13 @@
     --color-secondary-blue-light: #555a65;
 
     --color-status-success: #28a745;
+    --color-status-success-dark: #146C43;
     --color-status-danger: #dc3545;
-    --color-status-warning: #ffc107;
+    --color-status-danger-dark: #B02A37;
     --color-status-info: #17a2b8;
+    --color-status-info-dark: #087990;
+    --color-status-warning: #ffc107;
+    --color-status-warning-dark: #997404;
 
     --color-gray: #5a5d5d;
     --color-gray-medium: #999999;

@@ -3,31 +3,43 @@
     border: none;
     border-radius: .6rem;
     cursor: pointer;
+    color: var(--color-base-light);
     transition: all .3s ease-out;
 }
 
 .btn:disabled {
     opacity: 55%;
-
     pointer-events: none;
 }
 
 /* **** Variants **** */
 
 .btn--primary {
-    background-color: var(--color-base-light);
-    border: 1px solid var(--color-base-dark);
+    background-color: var(--color-primary);
 }
+
+.btn--primary:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn--success {
+    background-color: var(--color-status-success);
+}
+
+.btn--success:hover {
+    background-color: var(--color-status-success-dark);
+}
+
 
 .btn--light {
     background-color: var(--color-base-light);
     border: 1px solid var(--color-base-dark);
+    color: var(--color-base-dark);
 }
 
 .btn--light:hover {
     background-color: var(--color-gray);
     border-color: var(--color-secondary-blue);
-    color: var(--color-base-light)
 }
 
 .btn--light:disabled {
@@ -37,7 +49,6 @@
 
 .btn--dark {
     background-color: var(--color-base-dark);
-    color: var(--color-base-light)
 }
 
 .btn--dark:hover {
