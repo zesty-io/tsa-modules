@@ -1,0 +1,38 @@
+.btn {
+    font-family: "Montserrat", serif;
+
+    border: none;
+    border-radius: .6rem;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.btn--dark {
+    background-color: var(--color-base-dark);
+    color: var(--color-base-light)
+}
+
+.btn--dark:hover {
+    background-color: var(--color-gray);
+}
+
+.btn--dark:disabled {
+    background-color: var(--color-secondary-blue-dark);
+    opacity: 55%;
+    cursor: default;
+}
+
+
+/* **** Sizes **** */
+
+.btn--small {
+    padding: 1.2rem 1.4rem;
+}
+
+.btn--medium {
+    padding: 1.6rem 1.8rem;
+}
+
+.btn--large {
+    padding: 2rem 2.2rem;
+}
