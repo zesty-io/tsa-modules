@@ -46,6 +46,14 @@
     background-color: var(--color-status-info-dark);
 }
 
+.btn--warning {
+    background-color: var(--color-status-warning);
+}
+
+.btn--warning:hover {
+    background-color: var(--color-status-warning-dark);
+}
+
 
 .btn--light {
     background-color: var(--color-base-light);
