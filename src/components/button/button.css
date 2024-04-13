@@ -30,6 +30,14 @@
     background-color: var(--color-status-success-dark);
 }
 
+.btn--danger {
+    background-color: var(--color-status-danger);
+}
+
+.btn--danger:hover {
+    background-color: var(--color-status-danger-dark);
+}
+
 
 .btn--light {
     background-color: var(--color-base-light);
