@@ -16,7 +16,7 @@ const meta = {
     onClick: { action: 'onClick', type: 'function' },
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'dark'],
+      options: ['primary', 'secondary', 'dark', 'light'],
       type: 'string',
       defaultValue: { summary: 'primary' }
     },
@@ -34,6 +34,13 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<ButtonProps>;
+
+export const Light: Story = {
+  args: {
+    label: 'Button',
+    variant: 'light'
+  }
+};
 
 export const Dark: Story = {
   args: {

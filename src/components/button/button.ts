@@ -1,7 +1,7 @@
 import './button.css';
 
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'dark';
+  variant?: 'primary' | 'secondary' | 'dark' | 'light';
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
   label: string;
@@ -10,7 +10,7 @@ export interface ButtonProps {
 }
 
 export const Button = ({
-  variant = 'dark',
+  variant = 'primary',
   size = 'medium',
   backgroundColor,
   label,
