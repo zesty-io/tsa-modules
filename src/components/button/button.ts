@@ -1,8 +1,8 @@
 import './button.css';
 
 export interface ButtonProps {
-  variant?: 'primary' | 'success' | 'danger' | 'info' | 'warning' | 'dark' | 'light';
-  backgroundColor?: string;
+  color?: 'primary' | 'success' | 'danger' | 'info' | 'warning' | 'dark' | 'light';
+  variant?: 'fill' | 'outline';
   size?: 'small' | 'medium' | 'large';
   label: string;
   onClick?: () => void;
@@ -10,9 +10,9 @@ export interface ButtonProps {
 }
 
 export const Button = ({
-  variant = 'primary',
+  color = 'primary',
+  variant = 'fill',
   size = 'medium',
-  backgroundColor,
   label,
   onClick,
   disabled = false
@@ -24,11 +24,7 @@ export const Button = ({
     btn.addEventListener('click', onClick);
   }
 
-  btn.className = ['btn', `btn--${variant} btn--${size}`].join(' ');
-
-  if (backgroundColor) {
-    btn.style.backgroundColor = backgroundColor;
-  }
+  btn.className = ['btn', `btn--${size}`, `btn--${color}--${variant}`].join(' ');
 
   btn.disabled = disabled;
 

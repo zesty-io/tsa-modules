@@ -8,15 +8,17 @@ const meta = {
     layout: 'centered'
   },
   argTypes: {
-    backgroundColor: {
-      control: 'color',
-      type: 'string'
-    },
     label: { control: 'text' },
     onClick: { action: 'onClick', type: 'function' },
-    variant: {
+    color: {
       control: { type: 'select' },
       options: ['primary', 'success', 'danger', 'info', 'warning', 'dark', 'light'],
+      type: 'string',
+      defaultValue: { summary: 'primary' }
+    },
+    variant: {
+      control: { type: 'select' },
+      options: ['fill', 'outline'],
       type: 'string',
       defaultValue: { summary: 'primary' }
     },
@@ -37,48 +39,47 @@ type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
   args: {
-    label: 'Button',
-    variant: 'primary'
+    label: 'Button'
   }
 };
 export const Success: Story = {
   args: {
     label: 'Button',
-    variant: 'success'
+    color: 'success'
   }
 };
 
 export const Danger: Story = {
   args: {
     label: 'Button',
-    variant: 'danger'
+    color: 'danger'
   }
 };
 
 export const Info: Story = {
   args: {
     label: 'Button',
-    variant: 'info'
+    color: 'info'
   }
 };
 
 export const Warning: Story = {
   args: {
     label: 'Button',
-    variant: 'warning'
+    color: 'warning'
   }
 };
 
 export const Light: Story = {
   args: {
     label: 'Button',
-    variant: 'light'
+    color: 'light'
   }
 };
 
 export const Dark: Story = {
   args: {
     label: 'Button',
-    variant: 'dark'
+    color: 'dark'
   }
 };

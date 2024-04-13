@@ -12,77 +12,87 @@
     pointer-events: none;
 }
 
-/* **** Variants **** */
+/* **** Colors **** */
 
-.btn--primary {
+.btn--primary--fill {
     background-color: var(--color-primary);
 }
 
-.btn--primary:hover {
+.btn--primary--fill:hover {
     background-color: var(--color-primary-light);
 }
 
-.btn--success {
+.btn--success--fill {
     background-color: var(--color-status-success);
 }
 
-.btn--success:hover {
+.btn--success--fill:hover {
     background-color: var(--color-status-success-dark);
 }
 
-.btn--danger {
+.btn--danger--fill {
     background-color: var(--color-status-danger);
 }
 
-.btn--danger:hover {
+.btn--danger--fill:hover {
     background-color: var(--color-status-danger-dark);
 }
 
-.btn--info {
+.btn--info--fill {
     background-color: var(--color-status-info);
 }
 
-.btn--info:hover {
+.btn--info--fill:hover {
     background-color: var(--color-status-info-dark);
 }
 
-.btn--warning {
+.btn--warning--fill {
     background-color: var(--color-status-warning);
 }
 
-.btn--warning:hover {
+.btn--warning--fill:hover {
     background-color: var(--color-status-warning-dark);
 }
 
-
-.btn--light {
+.btn--light--fill {
     background-color: var(--color-base-light);
     border: 1px solid var(--color-base-dark);
     color: var(--color-base-dark);
 }
 
-.btn--light:hover {
+.btn--light--fill:hover {
     background-color: var(--color-gray);
     border-color: var(--color-secondary-blue);
 }
 
-.btn--light:disabled {
+.btn--light--fill:disabled {
     border-color: var(--color-secondary-blue-dark);
     color: var(--color-base-dark);
 }
 
-.btn--dark {
+.btn--dark--fill {
     background-color: var(--color-base-dark);
 }
 
-.btn--dark:hover {
+.btn--dark--fill:hover {
     background-color: var(--color-gray);
 }
 
-.btn--dark:disabled {
+.btn--dark--fill:disabled {
     background-color: var(--color-secondary-blue-dark);
 }
 
+/* **** Variants **** */
+.btn--primary--outline {
+    background-color: var(--color-base-light);
+    border: 1px solid var(--color-primary);
+    color: var(--color-base-dark);
+}
+
+.btn--primary--outline:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-base-light);
+}
 
 /* **** Sizes **** */
 
