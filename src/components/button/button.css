@@ -38,6 +38,14 @@
     background-color: var(--color-status-danger-dark);
 }
 
+.btn--info {
+    background-color: var(--color-status-info);
+}
+
+.btn--info:hover {
+    background-color: var(--color-status-info-dark);
+}
+
 
 .btn--light {
     background-color: var(--color-base-light);
