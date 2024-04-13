@@ -12,7 +12,7 @@ const meta = {
     onClick: { action: 'onClick', type: 'function' },
     color: {
       control: { type: 'select' },
-      options: ['primary', 'success', 'danger', 'info', 'warning', 'dark', 'light'],
+      options: ['primary', 'success', 'danger', 'info', 'warning', 'dark'],
       type: 'string',
       defaultValue: { summary: 'primary' }
     },
@@ -67,13 +67,6 @@ export const Warning: Story = {
   args: {
     label: 'Button',
     color: 'warning'
-  }
-};
-
-export const Light: Story = {
-  args: {
-    label: 'Button',
-    color: 'light'
   }
 };
 

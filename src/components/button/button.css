@@ -48,26 +48,13 @@
 
 .btn--warning--fill {
     background-color: var(--color-status-warning);
+    color: var(--color-base-dark);
 }
 
 .btn--warning--fill:hover {
     background-color: var(--color-status-warning-dark);
-}
+    color: var(--color-base-light);
 
-.btn--light--fill {
-    background-color: var(--color-base-light);
-    border: 1px solid var(--color-base-dark);
-    color: var(--color-base-dark);
-}
-
-.btn--light--fill:hover {
-    background-color: var(--color-gray);
-    border-color: var(--color-secondary-blue);
-}
-
-.btn--light--fill:disabled {
-    border-color: var(--color-secondary-blue-dark);
-    color: var(--color-base-dark);
 }
 
 .btn--dark--fill {
@@ -93,6 +80,71 @@
     background-color: var(--color-primary-light);
     color: var(--color-base-light);
 }
+
+.btn--success--outline {
+    background-color: var(--color-base-light);
+    border: 1px solid var(--color-status-success);
+    color: var(--color-status-success);
+}
+
+.btn--success--outline:hover {
+    background-color: var(--color-status-success-dark);
+    border-color: transparent;
+    color: var(--color-base-light);
+}
+
+.btn--danger--outline {
+    background-color: var(--color-base-light);
+    border: 1px solid var(--color-status-danger);
+    color: var(--color-status-danger);
+}
+
+.btn--danger--outline:hover {
+    background-color: var(--color-status-danger-dark);
+    border-color: transparent;
+    color: var(--color-base-light);
+}
+
+.btn--info--outline {
+    background-color: var(--color-base-light);
+    border: 1px solid var(--color-status-info);
+    color: var(--color-status-info);
+}
+
+.btn--info--outline:hover {
+    background-color: var(--color-status-info-dark);
+    border-color: transparent;
+    color: var(--color-base-light);
+}
+
+.btn--warning--outline {
+    background-color: var(--color-base-light);
+    border: 1px solid var(--color-status-warning);
+    color: var(--color-status-warning);
+}
+
+.btn--warning--outline:hover {
+    background-color: var(--color-status-warning-dark);
+    border-color: transparent;
+    color: var(--color-base-light);
+}
+
+.btn--dark--outline {
+    background-color: var(--color-base-light);
+    border: 1px solid var(--color-base-dark);
+    color: var(--color-base-dark);
+}
+
+.btn--dark--outline:hover {
+    background-color: var(--color-gray);
+    border-color: var(--color-secondary-blue);
+}
+
+.btn--dark--outline:disabled {
+    border-color: var(--color-secondary-blue-dark);
+    color: var(--color-base-dark);
+}
+
 
 /* **** Sizes **** */
 

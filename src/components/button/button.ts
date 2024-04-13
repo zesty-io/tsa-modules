@@ -1,7 +1,7 @@
 import './button.css';
 
 export interface ButtonProps {
-  color?: 'primary' | 'success' | 'danger' | 'info' | 'warning' | 'dark' | 'light';
+  color?: 'primary' | 'success' | 'danger' | 'info' | 'warning' | 'dark';
   variant?: 'fill' | 'outline';
   size?: 'small' | 'medium' | 'large';
   label: string;
