@@ -3,6 +3,7 @@ import { Hero, HeroProps } from './hero-module';
 
 const meta = {
   title: 'Modules/Hero',
+
   parameters: {
     layout: 'centered'
   },

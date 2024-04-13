@@ -1,3 +1,6 @@
+import '../../components/button/button.css';
+import './hero-module.css';
+
 const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
@@ -33,58 +36,17 @@ styles.replaceSync(`
 
     & .content {
         text-align: center;
-        margin-bottom: 3rem;
         z-index: 40;
 
         & h1 {
             font-family: "Cinzel", serif;
             font-size: 2.8rem;
-            margin-bottom: 1.6rem;
         }
 
         & p {
             font-family: "Montserrat", serif;
             font-size: 1.6rem;
-        }
-    }
-
-    & .cta {
-        width: 30rem;
-        z-index: 40;
-
-        & .cta__primary {
-            margin-bottom: 1rem;
-
-            & button {
-                width: 100%;
-                color: #FFF;
-                background-color: #000;
-                border: none;
-                padding: 1.6rem .8rem;
-                cursor: pointer;
-                border-radius: .6rem;
-                font-size: 1.6rem;
-            }
-        }
-
-        & .cta__secondary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            & button {
-                font-size: 1.6rem;
-                flex: 1;
-                background-color: #FFF;
-                border: 1px solid black;
-                padding: 1.6rem .8rem;
-                cursor: pointer;
-                border-radius: .6rem;
-            }
-        }
-
-        & button:first-of-type {
-            margin-right: 1rem;
+            margin-top: 1.6rem;
         }
     }
 }
@@ -106,7 +68,6 @@ export class HeroModule extends HTMLElement {
       this.shadowRoot.innerHTML = `
         <div
           class="hero"
-          type="button"
         >
           <div class="hero__bg">
             <img src="${imageUrl}" />
@@ -114,20 +75,13 @@ export class HeroModule extends HTMLElement {
           <div class="content">
             <h1>${title}</h1>
             <p>
-                <slot>
+                <slot name="subtitle">
                 </slot>
             </p>
           </div>
     
-          <div class="cta">
-            <div class="cta__primary">
-              <button>Primary CTA</button>
-            </div>
-            <div class="cta__secondary">
-              <button>CTA</button>
-              <button>CTA</button>
-            </div>
-          </div>
+          <slot name="cta">
+          </slot>
         </div>
         `;
     }
@@ -142,7 +96,16 @@ export interface HeroProps {
 
 export const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
   return `
-  <my-web-component title="${title}" subtitle="${subtitle}" imageUrl="${imageUrl}">
-    ${subtitle}
+  <my-web-component title="${title}" imageUrl="${imageUrl}">
+    <p slot="subtitle">${subtitle}</p>
+    <div slot="cta" class="cta">
+        <div class="cta__primary">  
+            <button type="button" class="btn btn--medium btn--dark--fill btn--fillWidth">Primary CTA</button>
+        </div>
+        <div class="cta__secondary">
+            <button type="button" class="btn btn--medium btn--dark--outline">CTA</button>
+            <button type="button" class="btn btn--medium btn--dark--outline">CTA</button>
+        </div>
+    </div>
   </my-web-component>`;
 };

@@ -5,6 +5,7 @@
     cursor: pointer;
     color: var(--color-base-light);
     transition: all .3s ease-out;
+    font-size: 1.6rem;
 }
 
 .btn:disabled {
@@ -158,4 +159,8 @@
 
 .btn--large {
     padding: 2rem 2.2rem;
+}
+
+.btn--fillWidth {
+    width: 100%;
 }

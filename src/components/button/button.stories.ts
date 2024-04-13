@@ -7,6 +7,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+
   argTypes: {
     label: { control: 'text' },
     onClick: { action: 'onClick', type: 'function' },
@@ -28,7 +29,8 @@ const meta = {
       type: 'string',
       defaultValue: { summary: 'medium' }
     },
-    disabled: { type: 'boolean' }
+    disabled: { type: 'boolean' },
+    fillWidth: { type: 'boolean', description: 'Makes the width of the button to 100%' }
   },
   render: (args) => Button(args)
 } satisfies Meta<ButtonProps>;

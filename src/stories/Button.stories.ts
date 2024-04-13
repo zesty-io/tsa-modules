@@ -19,11 +19,11 @@ const meta = {
     primary: { control: 'boolean' },
     size: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
+      options: ['small', 'medium', 'large']
+    }
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+  args: { onClick: fn() }
 } satisfies Meta<ButtonProps>;
 
 export default meta;
@@ -33,26 +33,26 @@ type Story = StoryObj<ButtonProps>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
