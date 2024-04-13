@@ -96,7 +96,7 @@ export interface HeroProps {
 
 export const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
   return `
-  <my-web-component title="${title}" imageUrl="${imageUrl}">
+  <hero-module title="${title}" imageUrl="${imageUrl}">
     <p slot="subtitle">${subtitle}</p>
     <div slot="cta" class="cta">
         <div class="cta__primary">  
@@ -107,5 +107,5 @@ export const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
             <button type="button" class="btn btn--medium btn--dark--outline">CTA</button>
         </div>
     </div>
-  </my-web-component>`;
+  </hero-module>`;
 };

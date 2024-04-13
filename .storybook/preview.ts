@@ -4,7 +4,7 @@ import '../src/styles/index.css';
 
 import { HeroModule } from '../src/modules/hero/hero-module';
 
-customElements.define('my-web-component', HeroModule);
+customElements.define('hero-module', HeroModule);
 
 const preview: Preview = {
   parameters: {
