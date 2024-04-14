@@ -3,7 +3,9 @@ import { LocalNeed, LocalNeedProps } from './local-need-module';
 
 const meta = {
   title: 'Modules/Local Need',
-
+  parameters: {
+    layout: 'centered'
+  },
   tags: ['autodocs'],
   render: (args) => LocalNeed(args),
   argTypes: {}
