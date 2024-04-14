@@ -3,9 +3,8 @@ import { Hero, HeroProps } from './hero-module';
 
 const meta = {
   title: 'Modules/Hero',
-
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   render: (args) => Hero(args),
@@ -16,10 +15,10 @@ export default meta;
 type Story = StoryObj<HeroProps>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Default: Story = {
+export const Example: Story = {
   args: {
-    title: 'Marketing message/ key moments events',
-    subtitle: 'Subtitle of the hero goes here',
+    title: 'Title',
+    subtitle: 'Subtitle',
     imageUrl: 'https://mgfrnv8q.media.zestyio.com/Vector.png'
   }
 };

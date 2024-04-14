@@ -13,7 +13,7 @@ styles.replaceSync(`
     flex-direction: column;
     padding: 0 2rem;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
 
     & .hero__bg {
         position: absolute;
@@ -41,14 +41,65 @@ styles.replaceSync(`
         & h1 {
             font-family: "Cinzel", serif;
             font-size: 2.8rem;
+            line-height: 3.36rem;
         }
 
         & p {
             font-family: "Montserrat", serif;
             font-size: 1.6rem;
             margin-top: 1.6rem;
+            line-height: 2.8rem;
         }
     }
+}
+
+@media (min-width: 640px){
+  .hero{
+    & .content{
+      & h1{
+        padding: 0 10rem;
+        font-size: 3.6rem;
+      }
+
+      & p{
+        padding: 0 10rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .hero{
+    padding: 5rem 2rem;
+    & .content{
+      & h1{
+        padding: 0 15rem;
+        font-size: 4.6rem;
+      }
+
+      & p {
+        padding: 0 10rem;
+
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px){
+  .hero{
+    padding: 5rem 2rem;
+    & .content{
+      & h1{
+        padding: 0 28rem;
+        font-size: 6.4rem;
+        line-height: 7.68rem;
+      }
+
+      & p{
+        padding: 0 15rem;
+      }
+    }
+  }
 }
     `);
 
@@ -100,11 +151,11 @@ export const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
     <p slot="subtitle">${subtitle}</p>
     <div slot="cta" class="cta">
         <div class="cta__primary">  
-            <button type="button" class="btn btn--medium btn--dark--fill btn--fillWidth">Primary CTA</button>
+            <button type="button" class="btn btn--small btn--dark--fill btn--fillWidth">Primary CTA</button>
         </div>
         <div class="cta__secondary">
-            <button type="button" class="btn btn--medium btn--dark--outline">CTA</button>
-            <button type="button" class="btn btn--medium btn--dark--outline">CTA</button>
+            <button type="button" class="btn btn--small btn--dark--outline">CTA</button>
+            <button type="button" class="btn btn--small btn--dark--outline">CTA</button>
         </div>
     </div>
   </hero-module>`;

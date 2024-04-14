@@ -22,5 +22,8 @@
     "storybook": "^8.0.8",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@storybook/addon-viewport": "^8.0.8"
   }
 }
