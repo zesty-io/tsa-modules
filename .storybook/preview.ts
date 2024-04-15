@@ -5,11 +5,13 @@ import '../src/styles/index.css';
 
 import { LocalNeedModule } from '../src/modules/local-need/local-need-module';
 import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module';
+import { LightboxModule } from '../src/modules/lightbox/lightbox-module';
 import { HeroModule } from '../src/modules/hero/hero-module';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
 customElements.define('local-needs-module', LocalNeedsModule);
+customElements.define('lightbox-module', LightboxModule);
 
 const preview: Preview = {
   parameters: {

@@ -21,7 +21,7 @@ const meta = {
       control: { type: 'select' },
       options: ['fill', 'outline'],
       type: 'string',
-      defaultValue: { summary: 'primary' }
+      defaultValue: { summary: 'fill' }
     },
     size: {
       control: { type: 'select' },
