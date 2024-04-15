@@ -7,6 +7,7 @@ styles.replaceSync(`
     padding: 3.2rem 1.6rem;
     box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.25);
     background: rgba(239, 241, 240, 1);
+    
 
     & .card__header{
       & h1{
