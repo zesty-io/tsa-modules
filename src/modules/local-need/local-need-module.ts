@@ -68,6 +68,6 @@ export const LocalNeed = ({ title }: LocalNeedProps) => {
         <p>
           Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut
         </p>
-    </local-need-modulee>
+    </local-need-module>
     `;
 };
