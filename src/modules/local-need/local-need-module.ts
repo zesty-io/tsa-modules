@@ -2,7 +2,6 @@ const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
     .local-need{
-      width: 36rem;
 
       & .local-need--header{
           display: flex;  

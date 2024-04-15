@@ -22,8 +22,29 @@ styles.replaceSync(`
         & .local-needs__content{
             display: grid;
             row-gap: 2.6rem;
+            justify-content: center; 
+            align-items: center; 
         }
     }
+
+      @media (min-width: 840px){
+        .local-needs__content{
+            grid-template-columns: auto auto;
+            column-gap: 2.6rem;
+        }
+      }
+      
+      @media (min-width: 1024px){
+        .local-needs__content{
+         
+        }
+      }
+      
+      @media (min-width: 1280px){
+        .local-needs__content{
+            grid-template-columns: auto auto auto;
+        }
+      }
 `);
 
 export class LocalNeedsModule extends HTMLElement {
@@ -46,7 +67,7 @@ export class LocalNeedsModule extends HTMLElement {
         <div class="local-needs__image">
             <img src="${imageUrl}"/>
         </div>
-
+        
         <div class="local-needs__content">
             <slot></slot>
         </div>
