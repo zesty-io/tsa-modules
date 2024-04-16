@@ -3,7 +3,7 @@ const styles = new CSSStyleSheet();
 styles.replaceSync(`
     .local-need{
 
-      & .local-need--header{
+      & .local-need__header{
           display: flex;  
 
           & span{
@@ -16,7 +16,7 @@ styles.replaceSync(`
           }
       }
 
-      & .local-need--content{
+      & .local-need__content{
          margin-top: 1rem;
          font-size: 1.6rem;
          line-height: 2.8rem;
@@ -43,11 +43,11 @@ export class LocalNeedModule extends HTMLElement {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
         <div class="local-need">
-            <div class="local-need--header">
+            <div class="local-need__header">
               <span><slot name="icon"></slot></span> 
               <h1>${title}</h1>
             </div>
-            <div class="local-need--content">
+            <div class="local-need__content">
               <slot></slot>
             </div>
         </div>

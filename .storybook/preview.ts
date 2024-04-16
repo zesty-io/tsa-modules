@@ -7,6 +7,7 @@ import { LocalNeedModule } from '../src/modules/local-need/local-need-module';
 import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module';
 import { LightboxModule } from '../src/modules/lightbox/lightbox-module';
 import { StatsModule } from '../src/modules/stats/stats-module';
+import { StatsImageCardModule } from '../src/modules/stats-image-card/stats-image-card';
 import { HeroModule } from '../src/modules/hero/hero-module';
 import { CardComponent } from '../src/components/card/card';
 
@@ -14,6 +15,7 @@ customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
 customElements.define('local-needs-module', LocalNeedsModule);
 customElements.define('stats-module', StatsModule);
+customElements.define('stat-image-card-module', StatsImageCardModule);
 customElements.define('lightbox-module', LightboxModule);
 customElements.define('card-component', CardComponent);
 
