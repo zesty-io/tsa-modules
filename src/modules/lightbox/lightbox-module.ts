@@ -28,6 +28,7 @@ styles.replaceSync(`
             & h1{
                 font-family: "Cinzel", serif;
                 font-size: 4.8rem;
+                font-weight: 200;
                 text-align: center;
                 line-height: 5.76rem;
             }

@@ -8,6 +8,7 @@ styles.replaceSync(`
            & h1{
                 font-family: "Cinzel", serif;
                 font-size: 2.8rem;
+                font-weight: 200;
                 text-align: center;
            }
         }
