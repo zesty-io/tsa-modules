@@ -19,3 +19,10 @@ export const Example: Story = {
     title: '[FPO] STATS'
   }
 };
+
+export const ExampleImageCard: Story = {
+  args: {
+    title: '[FPO] STATS',
+    imageCard: true
+  }
+};
