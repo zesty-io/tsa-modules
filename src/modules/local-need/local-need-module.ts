@@ -58,14 +58,16 @@ export class LocalNeedModule extends HTMLElement {
 
 export interface LocalNeedProps {
   title: string;
+  content: string;
+  icon: string;
 }
 
-export const LocalNeed = ({ title }: LocalNeedProps) => {
+export const LocalNeed = ({ title, content, icon }: LocalNeedProps) => {
   return `
     <local-need-module title="${title}">
-        <i slot="icon" class="bi bi-image"></i>
+        ${icon}
         <p>
-          Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut
+          ${content}
         </p>
     </local-need-module>
     `;

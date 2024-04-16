@@ -17,6 +17,9 @@ type Story = StoryObj<LocalNeedProps>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Example: Story = {
   args: {
-    title: '[FPO] Title'
+    title: '[FPO] Title',
+    content:
+      'Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut',
+    icon: '<i slot="icon" class="bi bi-image"></i>'
   }
 };

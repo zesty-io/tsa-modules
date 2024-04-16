@@ -47,13 +47,14 @@ export class CardComponent extends HTMLElement {
 
 export interface CardProps {
   title: string;
+  content: string;
 }
 
-export const Card = ({ title }: CardProps) => {
+export const Card = ({ title, content }: CardProps) => {
   return `
       <card-component title="${title}">
         <p class="content">
-          of children in the United States under the age of 18 face food insecurity on a regular basis
+          ${content}
         </p>
       </card-component>
     `;
