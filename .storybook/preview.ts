@@ -8,6 +8,7 @@ import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module'
 import { LightboxModule } from '../src/modules/lightbox/lightbox-module';
 import { StatsModule } from '../src/modules/stats/stats-module';
 import { StatsImageCardModule } from '../src/modules/stats-image-card/stats-image-card';
+import { ImageButtonTextModule } from '../src/modules/image-button-text/image-button-text-module';
 import { HeroModule } from '../src/modules/hero/hero-module';
 import { CardComponent } from '../src/components/card/card';
 
@@ -16,6 +17,7 @@ customElements.define('local-need-module', LocalNeedModule);
 customElements.define('local-needs-module', LocalNeedsModule);
 customElements.define('stats-module', StatsModule);
 customElements.define('stat-image-card-module', StatsImageCardModule);
+customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 customElements.define('card-component', CardComponent);
 

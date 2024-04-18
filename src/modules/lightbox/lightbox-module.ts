@@ -98,33 +98,14 @@ export class LightboxModule extends HTMLElement {
 export interface LightboxProps {
   title: string;
   imageUrl: string;
+  content: string;
 }
 
-export const Lightbox = ({ title }: LightboxProps) => {
+export const Lightbox = ({ title, content }: LightboxProps) => {
   return `
   <button id="open" type="button" class="btn btn--small btn--success--fill">Open</button>
         <lightbox-module title="${title}">
-            <div class="content">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <div class="content__cta">
-                    <button type="button" class="btn btn--small btn--dark--fill btn--fillWidth">[FPO Give Once]</button>
-                    <button type="button" class="btn btn--small btn--dark--outline btn--fillWidth">[FPO Give Monthly]</button>
-                </div>
-            </div>
+            ${content}
         </lightbox-module>
-
-        <script>    
-            document.getElementById("open").onclick = () =>{
-              document.querySelector("lightbox-module").toggleAttribute('open');
-            }
-        </script>
     `;
 };
