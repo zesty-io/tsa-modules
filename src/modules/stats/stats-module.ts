@@ -49,17 +49,13 @@ export class StatsModule extends HTMLElement {
 
 export interface StatsProps {
   title: string;
-  imageCard: boolean;
 }
 
-export const Stats = ({ title, imageCard }: StatsProps) => {
+export const Stats = ({ title }: StatsProps) => {
   return `
         <stats-module title ="${title}">
             <div slot="content">
                 <div id="content">
-                ${
-                  imageCard
-                    ? `
                     <stat-image-card-module title="[FPO] 1,000,000 Meals Served" imageUrl="https://mgfrnv8q.media.zestyio.com/Vector.png">
                         <p id="stat-content">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</p>
                     </stat-image-card-module>
@@ -69,25 +65,6 @@ export const Stats = ({ title, imageCard }: StatsProps) => {
                     <stat-image-card-module title="[FPO] 1,000,000 Meals Served" imageUrl="https://mgfrnv8q.media.zestyio.com/Vector.png">
                         <p id="stat-content">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</p>
                     </stat-image-card-module>
-                    `
-                    : `
-                    <card-component title="20%">
-                        <p class="content">
-                        of children in the United States under the age of 18 face food insecurity on a regular basis
-                        </p>
-                    </card-component>
-                    <card-component title="20%">
-                        <p class="content">
-                        of children in the United States under the age of 18 face food insecurity on a regular basis
-                        </p>
-                    </card-component>
-                    <card-component title="20%">
-                        <p class="content">
-                        of children in the United States under the age of 18 face food insecurity on a regular basis
-                        </p>
-                    </card-component>
-                    `
-                }
                 </div>
                 
                 <div id="cta">

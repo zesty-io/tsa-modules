@@ -1,6 +1,6 @@
-import './input.css';
+import './textarea.css';
 
-export interface InputProps {
+export interface TextareaProps {
   name: string;
   size?: 'small' | 'medium' | 'large';
   type: 'email' | 'text' | 'password' | 'number';
@@ -10,7 +10,7 @@ export interface InputProps {
   label?: string;
 }
 
-export const Input = ({
+export const Textarea = ({
   name,
   size = 'medium',
   type = 'text',
@@ -18,11 +18,11 @@ export const Input = ({
   placeholder,
   disabled = false,
   label
-}: InputProps) => {
+}: TextareaProps) => {
   return `
-    <label class="input">
+    <label class="textarea">
         <span class="placeholder">${label}</span>
-        <input class="input--${size}" name="${name}" value="${value}" placeholder="${placeholder}" type="${type}" ${disabled && 'disabled'}/>
+        <textarea class="textarea--${size}" name="${name}" placeholder="${placeholder}" type="${type}" ${disabled && 'disabled'}>${value}</textarea>
     </label>
   `;
 };
