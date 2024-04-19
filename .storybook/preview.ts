@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/html';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 import '../src/styles/variables.css';
 import '../src/styles/index.css';
 
