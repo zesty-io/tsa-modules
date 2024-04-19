@@ -13,6 +13,7 @@ import { ImageButtonTextModule } from '../src/modules/image-button-text/image-bu
 import { HeroModule } from '../src/modules/hero/hero-module';
 
 import { CardComponent } from '../src/components/card/card';
+import { TSATitleComponent } from '../src/components/title/title';
 import { TitleWithIconComponent } from '../src/components/title-with-icon/title-with-icon';
 
 customElements.define('hero-module', HeroModule);
@@ -24,6 +25,7 @@ customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 
 customElements.define('card-component', CardComponent);
+customElements.define('tsa-title', TSATitleComponent, { extends: 'h1' });
 customElements.define('title-with-icon-component', TitleWithIconComponent);
 
 const preview: Preview = {
