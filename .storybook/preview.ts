@@ -25,7 +25,7 @@ customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 
 customElements.define('card-component', CardComponent);
-customElements.define('tsa-title', TSATitleComponent, { extends: 'h1' });
+customElements.define('tsa-title', TSATitleComponent);
 customElements.define('tsa-title-with-icon', TSATitleWithIcon);
 
 const preview: Preview = {
