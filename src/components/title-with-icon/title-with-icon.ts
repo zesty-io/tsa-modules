@@ -17,7 +17,7 @@ styles.replaceSync(`
   }
 `);
 
-export class TSATitleWithIcon extends HTMLElement {
+export class TSATitleWithIconComponent extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });

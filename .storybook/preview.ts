@@ -14,7 +14,8 @@ import { HeroModule } from '../src/modules/hero/hero-module';
 
 import { TSACardComponent } from '../src/components/card/card';
 import { TSATitleComponent } from '../src/components/title/title';
-import { TSATitleWithIcon } from '../src/components/title-with-icon/title-with-icon';
+import { TSATitleWithIconComponent } from '../src/components/title-with-icon/title-with-icon';
+import { TSATextComponent } from '../src/components/text/text';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -24,9 +25,10 @@ customElements.define('stat-image-card-module', StatsImageCardModule);
 customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 
-customElements.define('card-component', TSACardComponent);
+customElements.define('tsa-card', TSACardComponent);
 customElements.define('tsa-title', TSATitleComponent);
-customElements.define('tsa-title-with-icon', TSATitleWithIcon);
+customElements.define('tsa-title-with-icon', TSATitleWithIconComponent);
+customElements.define('tsa-text', TSATextComponent);
 
 const preview: Preview = {
   parameters: {

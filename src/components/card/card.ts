@@ -45,8 +45,8 @@ export interface CardProps {
 
 export const Card = ({ content }: CardProps) => {
   return `
-      <card-component>
+      <tsa-card>
         ${content}
-      </card-component>
+      </tsa-card>
     `;
 };

@@ -18,7 +18,7 @@ export const Example: Story = {
   args: {
     content: `<div class="content">
           <tsa-title>[FPO] Title</tsa-title>
-          <p>of children in the United States under the age of 18 face food insecurity on a regular basis</p>
+          <tsa-text>Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</tsa-text>
         </div>
     `
   }
