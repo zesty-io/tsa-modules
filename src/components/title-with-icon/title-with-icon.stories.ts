@@ -16,7 +16,7 @@ type Story = StoryObj<TitleWithIconProps>;
 
 export const Example: Story = {
   args: {
-    title: '[FPO] Title',
+    title: '<h1 slot="title">[FPO] Title</h1>',
     icon: '<i slot="icon" class="bi bi-image"></i>'
   }
 };
