@@ -16,8 +16,10 @@ type Story = StoryObj<CardProps>;
 
 export const Example: Story = {
   args: {
-    title: '20%',
-    content:
-      'of children in the United States under the age of 18 face food insecurity on a regular basis'
+    content: `<div class="content">
+          <tsa-title>[FPO] Title</tsa-title>
+          <p>of children in the United States under the age of 18 face food insecurity on a regular basis</p>
+        </div>
+    `
   }
 };
