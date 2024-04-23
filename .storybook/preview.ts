@@ -16,6 +16,8 @@ import { TSACardComponent } from '../src/components/card/card';
 import { TSATitleComponent } from '../src/components/title/title';
 import { TSATitleWithIconComponent } from '../src/components/title-with-icon/title-with-icon';
 import { TSATextComponent } from '../src/components/text/text';
+import { SearchBarModule } from '../src/modules/search-bar/search-bar-module';
+import { StatsNumberModule } from '../src/modules/stats-number/stats-number';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -29,6 +31,8 @@ customElements.define('tsa-card', TSACardComponent);
 customElements.define('tsa-title', TSATitleComponent);
 customElements.define('tsa-title-with-icon', TSATitleWithIconComponent);
 customElements.define('tsa-text', TSATextComponent);
+customElements.define('search-bar', SearchBarModule);
+customElements.define('stats-number', StatsNumberModule);
 
 const preview: Preview = {
   parameters: {

@@ -139,6 +139,7 @@
 .btn--dark--outline:hover {
     background-color: var(--color-gray);
     border-color: var(--color-secondary-blue);
+    color: var(--color-base-light);
 }
 
 .btn--dark--outline:disabled {

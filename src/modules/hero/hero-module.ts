@@ -125,7 +125,7 @@ export class HeroModule extends HTMLElement {
             <img src="${imageUrl}" />
           </div>
           <div class="content">
-            <h1>${title}</h1>
+            <h1>${title} NICO</h1>
             <p>
                 <slot name="subtitle">
                 </slot>
