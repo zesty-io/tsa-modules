@@ -2,10 +2,17 @@
 
 import './location-card-module.css';
 
-export const LocationCard = () => {
+export interface LocationCardProps {
+  selected: boolean;
+}
+
+export const LocationCard = ({ selected }: LocationCardProps) => {
   return `
-    <tsa-card class="tsa-location-card">
-        <h1>North Dallas Salavation Army</h1>
+    <tsa-card class="tsa-location-card" ${selected ? 'selected' : ''}>
+        <div class="tsa-location-card__header">
+          <i slot="icon" class="bi bi-geo-alt-fill"></i>
+          <h1>North Dallas Salavation Army</h1>
+        </div>
     
         <tsa-text-with-icon>
             <i slot="icon" class="bi bi-clock"></i> <p slot="title">Monday 10 AM - 8 PM</p>
