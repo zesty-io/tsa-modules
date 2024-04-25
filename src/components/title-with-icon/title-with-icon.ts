@@ -27,7 +27,7 @@ export class TSATitleWithIconComponent extends HTMLElement {
     if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
-                <div class="tsa__title-icon">
+                <div part="title-with-icon" class="tsa__title-icon">
                   <span class="tsa__title-icon__icon"><slot name="icon"></slot></span>
                   <span class="tsa__title-icon__title"><slot name="title"></slot></span>
                 </div>

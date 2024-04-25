@@ -8,17 +8,6 @@ styles.replaceSync(`
     box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.25);
     background: rgba(239, 241, 240, 1);
     display: inline-block;
-    
-
-    & .card__header{
-      & h1{
-        padding: 0;
-        margin:0;
-        font-size: 8rem;
-        text-align: center;
-        margin-bottom: 3rem;
-      }
-    }
   }
 `);
 

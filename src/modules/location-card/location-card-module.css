@@ -1,0 +1,96 @@
+.tsa-location-card {
+    background-color: #FFF;
+    width: inherit;
+
+    & h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+    }
+
+    & .tsa-location-card__controls {
+        display: flex;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-left: 3rem;
+
+        & :first-child {
+            margin-right: .5rem;
+        }
+
+        & :last-child {
+            &>* {
+                position: relative;
+                margin-right: 1rem;
+                color: #000;
+            }
+
+            &>*::before {
+                content: "";
+                height: 100%;
+                width: 1px;
+                background-color: #000;
+                position: absolute;
+                right: -.6rem;
+            }
+
+            &:last-child::before {
+                content: "";
+                height: 0%;
+                width: 1px;
+                background-color: #000;
+                position: absolute;
+            }
+        }
+    }
+
+
+    & .tsa-location-card__services {
+        & h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        & ul {
+            list-style: disc;
+            display: grid;
+            grid-template-columns: auto;
+            margin-left: 2rem;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+        }
+    }
+
+    &>* {
+        margin-bottom: 1.5rem;
+    }
+
+    & :last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 840px) {
+    .tsa-location-card {
+        & .tsa-location-card__services {
+            & h2 {
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            & ul {
+                list-style: disc;
+                display: grid;
+
+                grid-template-columns: auto auto;
+                margin-left: 2rem;
+                font-size: 1.3rem;
+                line-height: 1.6rem;
+            }
+        }
+
+
+    }
+}

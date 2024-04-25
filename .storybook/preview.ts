@@ -19,7 +19,6 @@ import { TSATextComponent } from '../src/components/text/text';
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SearchBarModule } from '../src/modules/search-bar/search-bar-module';
 import { StatsNumberModule } from '../src/modules/stats-number/stats-number';
-import { LocationCardModule } from '../src/modules/location-card/location-card-module';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -28,7 +27,6 @@ customElements.define('stats-module', StatsModule);
 customElements.define('stat-image-card-module', StatsImageCardModule);
 customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
-customElements.define('tsa-location-card', LocationCardModule);
 
 customElements.define('tsa-card', TSACardComponent);
 customElements.define('tsa-title', TSATitleComponent);
