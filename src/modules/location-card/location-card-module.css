@@ -1,5 +1,7 @@
 .tsa-location-card {
-    background-color: #FFF;
+    background-color: transparent;
+    border-radius: .6rem;
+    border: 1px solid var(--color-gray-light);
     width: inherit;
 
     & .tsa-location-card__header {

@@ -1,4 +1,4 @@
-// Todo Make dropdown for time
+// Todo Make dropdown for date and time
 
 import './location-card-module.css';
 
