@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/html';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { withConsole, setConsoleOptions } from '@storybook/addon-console';
 
 import '../src/styles/index.css';
 import '../src/styles/variables.css';
@@ -19,6 +20,9 @@ import { TSATextComponent } from '../src/components/text/text';
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SearchBarModule } from '../src/modules/search-bar/search-bar-module';
 import { StatsNumberModule } from '../src/modules/stats-number/stats-number';
+import { SelectModule } from '../src/components/select/select';
+import { TSAServicesModule } from '../src/modules/services-list/services-list';
+
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -35,6 +39,8 @@ customElements.define('tsa-text-with-icon', TSATextWithIconComponent);
 customElements.define('tsa-text', TSATextComponent);
 customElements.define('search-bar', SearchBarModule);
 customElements.define('stats-number', StatsNumberModule);
+customElements.define('tsa-select', SelectModule);
+customElements.define('tsa-services', TSAServicesModule);
 
 const preview: Preview = {
   parameters: {
@@ -51,7 +57,8 @@ const preview: Preview = {
       },
       defaultViewport: 'iphone14promax'
     }
-  }
+  },
+  decorators: [(storyFn, context) => withConsole()(storyFn)(context)],
 };
 
 export default preview;

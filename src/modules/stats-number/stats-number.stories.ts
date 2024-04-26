@@ -4,7 +4,7 @@ import { StatsNumber, StatsNumberProps } from './stats-number';
 const meta = {
   title: 'Modules/StatsNumber',
   parameters: {
-    layout: 'fullfullscreen'
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
   render: (args) => StatsNumber(args),
@@ -15,7 +15,7 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<StatsNumberProps>;
-
+  
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Example: Story = {
   args: {

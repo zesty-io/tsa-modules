@@ -255,7 +255,7 @@ export class SearchBarModule extends HTMLElement {
     this.buttonText = this.getAttribute('buttonText');
     this.label = this.getAttribute('label');
     const onClickAttributeValue = this.getAttribute('onClick');
-    console.log(onClickAttributeValue);
+
     // Convert the string representation to a function if the attribute exists
     if (onClickAttributeValue !== null) {
       this.onClick = new Function(onClickAttributeValue);
@@ -299,6 +299,7 @@ export interface SearchBarProps {
   buttonText?: string;
   label?: string;
   onClick?: () => void;
+  options: string;
 }
 
 export const SearchBar = ({
@@ -311,6 +312,7 @@ export const SearchBar = ({
   buttonText = '',
   label,
   onClick,
+  options,
 }: SearchBarProps) => {
   return `
     <search-bar 
@@ -324,6 +326,6 @@ export const SearchBar = ({
       label="${label}"
       onClick="${onClick ? 'onClick' : ''}"
     >
-    </search-bar>
+    </search-bar> <p>or</p> <tsa-select options='${options}'></tsa-select>
   `;
 };

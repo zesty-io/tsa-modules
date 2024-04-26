@@ -23,6 +23,19 @@ const meta = {
 export default meta;
 type Story = StoryObj<SearchBarProps>;
 
+
+const optionsArr = [
+  {
+    label: '[FPO] Homeless Shelter 1',
+    value: '1',
+  },
+  {
+    label: '[FPO] Homeless Shelter 2',
+    value: '2',
+  },
+];
+const optiosnJSON = JSON.stringify(optionsArr);
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Example: Story = {
   args: {
@@ -31,6 +44,7 @@ export const Example: Story = {
     placeholder: '“Food pantry”',
     label: '[FPO] What are you looking for?',
     buttonText: 'Search',
-    onClick: () => alert('clicked')
+    onClick: () => alert('clicked'),
+    options: optiosnJSON
   }
 };
