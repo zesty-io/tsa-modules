@@ -4,7 +4,7 @@ import './hero-module.css';
 const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
-    .hero {
+    .tsa-hero {
     background: rgba(175, 183, 187, 1);
     height: 50rem;
     display: flex;
@@ -15,7 +15,7 @@ styles.replaceSync(`
     position: relative;
     overflow: hidden; 
 
-    & .hero__bg {
+    & .tsa-hero__bg {
         position: absolute;
         height: 100%;
 
@@ -34,7 +34,7 @@ styles.replaceSync(`
         }
     }
 
-    & .content {
+    & .tsa-content {
         text-align: center;
         z-index: 40;
 
@@ -55,8 +55,8 @@ styles.replaceSync(`
 }
 
 @media (min-width: 640px){
-  .hero{
-    & .content{
+  .tsa-hero{
+    & .tsa-content{
       & h1{
         padding: 0 10rem;
         font-size: 3.6rem;
@@ -70,9 +70,9 @@ styles.replaceSync(`
 }
 
 @media (min-width: 1024px){
-  .hero{
+  .tsa-hero{
     padding: 5rem 2rem;
-    & .content{
+    & .tsa-content{
       & h1{
         padding: 0 15rem;
         font-size: 4.6rem;
@@ -87,9 +87,9 @@ styles.replaceSync(`
 }
 
 @media (min-width: 1280px){
-  .hero{
+  .tsa-hero{
     padding: 5rem 2rem;
-    & .content{
+    & .tsa-content{
       & h1{
         padding: 0 28rem;
         font-size: 6.4rem;
@@ -112,23 +112,21 @@ export class HeroModule extends HTMLElement {
 
   connectedCallback() {
     const title = this.getAttribute('title');
+    const subtitle = this.getAttribute('subtitle');
     const imageUrl = this.getAttribute('imageUrl');
 
     if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
 
       this.shadowRoot.innerHTML = `
-        <div
-          class="hero"
-        >
-          <div class="hero__bg">
+        <div class="tsa-hero">
+          <div class="tsa-hero__bg">
             <img src="${imageUrl}" />
           </div>
-          <div class="content">
-            <h1>${title} NICO</h1>
+          <div class="tsa-content">
+            <h1>${title}</h1>
             <p>
-                <slot name="subtitle">
-                </slot>
+               ${subtitle}
             </p>
           </div>
     
@@ -148,11 +146,10 @@ export interface HeroProps {
 
 export const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
   return `
-  <hero-module title="${title}" imageUrl="${imageUrl}">
-    <p slot="subtitle">${subtitle}</p>
+  <hero-module title="${title}" imageUrl="${imageUrl}" subtitle="${subtitle}">
     <div slot="cta" class="cta">
         <div class="cta__primary">  
-            <button type="button" class="btn btn--small btn--dark--fill btn--fillWidth">Primary CTA</button>
+            <button type="button" class="btn btn--small btn--dark--fill btn--fullWidth">Primary CTA</button>
         </div>
         <div class="cta__secondary">
             <button type="button" class="btn btn--small btn--dark--outline">CTA</button>
