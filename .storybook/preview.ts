@@ -13,7 +13,6 @@ import { ImageButtonTextModule } from '../src/modules/image-button-text/image-bu
 import { HeroModule } from '../src/modules/hero/hero-module';
 
 import { TSACardComponent } from '../src/components/card/card';
-import { TSATitleComponent } from '../src/components/title/title';
 import { TSATitleWithIconComponent } from '../src/components/title-with-icon/title-with-icon';
 import { TSATextComponent } from '../src/components/text/text';
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
@@ -29,7 +28,6 @@ customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 
 customElements.define('tsa-card', TSACardComponent);
-customElements.define('tsa-title', TSATitleComponent);
 customElements.define('tsa-title-with-icon', TSATitleWithIconComponent);
 customElements.define('tsa-text-with-icon', TSATextWithIconComponent);
 customElements.define('tsa-text', TSATextComponent);
