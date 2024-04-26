@@ -1,8 +1,0 @@
-.title-with-icon {
-    display: flex;
-}
-
-::slotted(h1) {
-    font-size: 2rem;
-    margin: 0rem;
-}
