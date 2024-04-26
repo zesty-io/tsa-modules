@@ -30,7 +30,7 @@ const meta = {
       defaultValue: { summary: 'medium' }
     },
     disabled: { type: 'boolean' },
-    fillWidth: { type: 'boolean', description: 'Makes the width of the button to 100%' }
+    fullWidth: { type: 'boolean', description: 'Makes the width of the button to 100%' }
   },
   render: (args) => Button(args)
 } satisfies Meta<ButtonProps>;

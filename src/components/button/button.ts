@@ -4,7 +4,7 @@ export interface ButtonProps {
   color?: 'primary' | 'success' | 'danger' | 'info' | 'warning' | 'dark';
   variant?: 'fill' | 'outline';
   size?: 'small' | 'medium' | 'large';
-  fillWidth?: boolean;
+  fullWidth?: boolean;
   label: string;
   onClick?: () => void;
   disabled?: boolean;
@@ -17,7 +17,7 @@ export const Button = ({
   label,
   onClick,
   disabled = false,
-  fillWidth
+  fullWidth
 }: ButtonProps) => {
   const btn = document.createElement('button');
   btn.type = 'button';
@@ -30,7 +30,7 @@ export const Button = ({
     'btn',
     `btn--${size}`,
     `btn--${color}--${variant}`,
-    `${fillWidth ? 'btn--fillWidth' : ''}`
+    `${fullWidth ? 'btn--fullWidth' : ''}`
   ].join(' ');
 
   btn.disabled = disabled;

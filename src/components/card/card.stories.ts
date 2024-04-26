@@ -17,8 +17,8 @@ type Story = StoryObj<CardProps>;
 export const Example: Story = {
   args: {
     content: `<div class="content">
-          <tsa-title>[FPO] Title</tsa-title>
-          <tsa-text>Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</tsa-text>
+          <h1 class="tsa-title">[FPO] Title</h1>
+          <p class="tsa-text">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</p>
         </div>
     `
   }
