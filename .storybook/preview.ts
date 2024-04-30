@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/html';
+import { register } from 'swiper/element/bundle';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withConsole, setConsoleOptions } from '@storybook/addon-console';
 
@@ -18,6 +19,7 @@ import { SearchBarModule } from '../src/modules/search-bar/search-bar-module';
 import { StatsNumberModule } from '../src/modules/stats-number/stats-number';
 import { SelectModule } from '../src/components/select/select';
 import { TSAServicesModule } from '../src/modules/services-list/services-list';
+import { TSAStoriesSingleModule } from '../src/modules/stories-single/stories-single';
 
 
 customElements.define('hero-module', HeroModule);
@@ -33,6 +35,8 @@ customElements.define('search-bar', SearchBarModule);
 customElements.define('stats-number', StatsNumberModule);
 customElements.define('tsa-select', SelectModule);
 customElements.define('tsa-services', TSAServicesModule);
+customElements.define('tsa-stories-single', TSAStoriesSingleModule);
+register();
 
 const preview: Preview = {
   parameters: {
