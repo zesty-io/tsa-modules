@@ -1,21 +1,21 @@
 import { Meta, StoryObj } from '@storybook/html';
-import { Title, TitleProps } from './title';
+import { Switch, SwitchProps } from './switch';
 
 const meta = {
-  title: 'Components/Title',
+  title: 'Components/Switch',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered'
   },
-  render: (args) => Title(args)
-} satisfies Meta<TitleProps>;
+  render: (args) => Switch(args)
+} satisfies Meta<SwitchProps>;
 
 export default meta;
 
-type Story = StoryObj<TitleProps>;
+type Story = StoryObj<SwitchProps>;
 
 export const Example: Story = {
   args: {
-    title: '[FPO] Title'
+    labels: 'EN,ES'
   }
 };

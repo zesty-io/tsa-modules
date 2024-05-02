@@ -1,0 +1,23 @@
+.tsa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .tsa-header__logo {
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+
+        & :first-child {
+            margin-right: .5rem;
+        }
+    }
+
+    &>* {
+        margin-right: 1rem;
+    }
+
+    & :last-child {
+        margin-right: 0;
+    }
+}

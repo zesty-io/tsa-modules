@@ -13,14 +13,15 @@ import { StatsModule } from '../src/modules/stats/stats-module';
 import { StatsImageCardModule } from '../src/modules/stats-image-card/stats-image-card';
 import { ImageButtonTextModule } from '../src/modules/image-button-text/image-button-text-module';
 import { HeroModule } from '../src/modules/hero/hero-module';
+import { HeaderModule } from '../src/modules/header/header-module';
 
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
+import { SwitchComponent } from '../src/components/switch/switch';
 import { SearchBarModule } from '../src/modules/search-bar/search-bar-module';
 import { StatsNumberModule } from '../src/modules/stats-number/stats-number';
 import { SelectModule } from '../src/components/select/select';
 import { TSAServicesModule } from '../src/modules/services-list/services-list';
 import { TSAStoriesSingleModule } from '../src/modules/stories-single/stories-single';
-
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -29,8 +30,10 @@ customElements.define('stats-module', StatsModule);
 customElements.define('stat-image-card-module', StatsImageCardModule);
 customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
+customElements.define('header-module', HeaderModule);
 
 customElements.define('tsa-text-with-icon', TSATextWithIconComponent);
+customElements.define('tsa-switch', SwitchComponent);
 customElements.define('search-bar', SearchBarModule);
 customElements.define('stats-number', StatsNumberModule);
 customElements.define('tsa-select', SelectModule);
@@ -54,7 +57,7 @@ const preview: Preview = {
       defaultViewport: 'iphone14promax'
     }
   },
-  decorators: [(storyFn, context) => withConsole()(storyFn)(context)],
+  decorators: [(storyFn, context) => withConsole()(storyFn)(context)]
 };
 
 export default preview;
