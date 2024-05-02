@@ -13,8 +13,32 @@
         }
     }
 
+    & .tsa-header__input {
+        position: relative;
+
+        & i {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            font-size: 2.3rem;
+        }
+
+        & input {
+            padding-left: 4rem;
+            width: 30rem;
+        }
+    }
+
+    & .tsa-header__cta {
+
+        & :first-child {
+            margin-right: 1.2rem;
+        }
+    }
+
     &>* {
-        margin-right: 1rem;
+        margin-right: 1.4rem;
     }
 
     & :last-child {
