@@ -1,0 +1,20 @@
+.header-location__list {
+    display: flex;
+
+    & li {
+        font-size: 1.6rem;
+
+        & a {
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+
+    &>* {
+        margin-right: 4rem;
+    }
+
+    & :last-child {
+        margin-right: 0;
+    }
+}

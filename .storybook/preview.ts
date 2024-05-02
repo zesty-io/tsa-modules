@@ -14,6 +14,7 @@ import { StatsImageCardModule } from '../src/modules/stats-image-card/stats-imag
 import { ImageButtonTextModule } from '../src/modules/image-button-text/image-button-text-module';
 import { HeroModule } from '../src/modules/hero/hero-module';
 import { HeaderModule } from '../src/modules/header/header-module';
+import { HeaderLocationModule } from '../src/modules/header-location/header-location-module';
 
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SwitchComponent } from '../src/components/switch/switch';
@@ -31,6 +32,7 @@ customElements.define('stat-image-card-module', StatsImageCardModule);
 customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 customElements.define('header-module', HeaderModule);
+customElements.define('header-location-module', HeaderLocationModule);
 
 customElements.define('tsa-text-with-icon', TSATextWithIconComponent);
 customElements.define('tsa-switch', SwitchComponent);
