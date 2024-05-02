@@ -10,7 +10,8 @@ export class HeaderModule extends HTMLElement {
     <div class="tsa-header">
         <div class="tsa-header__logo">
             <a href="${this.getAttribute('href') ?? '/'}">
-                <img  src="${this.getAttribute('logoUrl')}" alt="Salvation Army Logo"/>
+                <img class="logo-small" src="${this.getAttribute('src')}" alt="Salvation Army Logo"/>
+                <img class="logo-large" src="${this.getAttribute('srcLarge')}" alt="Salvation Army Logo"/>
             </a>
             <tsa-switch labels="EN,ES"></tsa-switch>
         </div>
@@ -26,18 +27,23 @@ export class HeaderModule extends HTMLElement {
             <button type="button" class="btn btn--small btn--dark--fill ">Find Help</button>
             <button type="button" class="btn btn--small btn--dark--fill ">Donate</button>
         </div>
+
+        <button class="tsa-header__burger">
+          <i class="bi bi-list"></i>
+        </button>
     </div>
     `;
   }
 }
 
 export interface HeaderProps {
-  logoUrl: String;
+  src: String;
   href: String;
+  srcLarge: String;
 }
 
-export const Header = ({ logoUrl, href }: HeaderProps) => {
+export const Header = ({ src, href, srcLarge }: HeaderProps) => {
   return `
-    <header-module logoUrl="${logoUrl}" href="${href}"></header-module>
+    <header-module srcLarge="${srcLarge}" src="${src}" href="${href}"></header-module>
     `;
 };
