@@ -4,44 +4,50 @@ const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
 :host{
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    background-color: #000;
-    color: #FFF;
-    padding: 1rem 2rem;
+    display: none;
+
 }
 
-svg{
-    margin-right: 1rem;
-    transform: scale(1.1);
-}
-
-.header-location__title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: .2rem;
-    margin-right: auto;
-
-    & .title{
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin-bottom: .5rem;
-    }
-
-    & .subtitle{
-        font-size: 1.3rem;
-        font-weight: 400;
+@media (min-width: 1280px){
+    :host{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        background-color: #000;
         color: #FFF;
-        text-decoration: none;
+        padding: 1rem 2rem;
     }
+    
+    svg{
+        margin-right: 1rem;
+        transform: scale(1.1);
+    }
+    
+    .header-location__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: .2rem;
+        margin-right: auto;
+    
+        & .title{
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+    
+        & .subtitle{
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #FFF;
+            text-decoration: none;
+        }
+    }
+    
+    .header-location__menu{
+        align-self: center;
+    }  
 }
-
-.header-location__menu{
-    align-self: center;
-}
-
 `);
 
 export class HeaderLocationModule extends HTMLElement {
