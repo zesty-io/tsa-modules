@@ -22,7 +22,7 @@
         align-items: center;
         justify-content: center;
         font-size: 1.6rem;
-        transition: all .2s ease-out;
+        transition: all .3s ease-out;
     }
 
     & .tsa-switch__label {
@@ -34,6 +34,18 @@
         font-size: 1.6rem;
         font-weight: 600;
         color: var(--color-gray);
+
+        & :first-child {
+            opacity: 0;
+        }
+
+        & :last-child {
+            opacity: 1;
+        }
+
+        & span {
+            transition: all .2s ease;
+        }
     }
 
     & input {
@@ -43,4 +55,14 @@
 
 & .tsa-switch[toggled] .tsa-switch__thumb {
     left: 4.5rem;
+}
+
+& .tsa-switch[toggled] .tsa-switch__label {
+    & :first-child {
+        opacity: 1;
+    }
+
+    & :last-child {
+        opacity: 0;
+    }
 }
