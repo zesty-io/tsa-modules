@@ -92,10 +92,20 @@ export const HeaderLocation = ({ title, subtitle }: HeaderLocationProps) => {
   return `<header-location-module title="${title}" subtitle="${subtitle}">
     <ul class="header-location__list">
         <li>
-            <a href="/">Our Services</a>
+        <tsa-dropdown title="About Us">
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+        </tsa-dropdown>
         </li>
         <li>
-            <a href="/">About Us</a>
+        <tsa-dropdown title="Our Services">
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
+        </tsa-dropdown>
         </li>
         <li>
             <a href="/">Ways to Give</a>

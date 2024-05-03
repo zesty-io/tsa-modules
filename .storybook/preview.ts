@@ -23,6 +23,8 @@ import { StatsNumberModule } from '../src/modules/stats-number/stats-number';
 import { SelectModule } from '../src/components/select/select';
 import { TSAServicesModule } from '../src/modules/services-list/services-list';
 import { TSAStoriesSingleModule } from '../src/modules/stories-single/stories-single';
+import { DropdownComponent } from '../src/components/dropdown/dropdown';
+import { DropdownItemComponent } from '../src/components/dropdown/dropdown-item';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -41,6 +43,9 @@ customElements.define('stats-number', StatsNumberModule);
 customElements.define('tsa-select', SelectModule);
 customElements.define('tsa-services', TSAServicesModule);
 customElements.define('tsa-stories-single', TSAStoriesSingleModule);
+customElements.define('tsa-dropdown', DropdownComponent);
+customElements.define('tsa-dropdown-item', DropdownItemComponent);
+
 register();
 
 const preview: Preview = {
