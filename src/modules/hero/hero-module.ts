@@ -102,7 +102,7 @@ styles.replaceSync(`
     }
   }
 }
-    `);
+`);
 
 export class HeroModule extends HTMLElement {
   constructor() {
