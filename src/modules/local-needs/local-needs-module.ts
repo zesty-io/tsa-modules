@@ -85,25 +85,43 @@ export interface LocalNeedsProps {
 
 export const LocalNeeds = ({ title, imageUrl }: LocalNeedsProps) => {
   return `
-        <local-needs-module title="${title}" imageUrl="${imageUrl}">
-            <local-need-module title="[FPO] Title">
-                <i slot="icon" class="bi bi-image"></i>
-                <p>
-                    Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut
-                </p>
-            </local-need-module> 
-            <local-need-module title="[FPO] Title">
-                <i slot="icon" class="bi bi-image"></i>
-                <p>
-                    Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut
-                </p>
-            </local-need-module> 
-            <local-need-module title="[FPO] Title">
-                <i slot="icon" class="bi bi-image"></i>
-                <p>
-                    Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut
-                </p>
-            </local-need-module> 
-        </local-needs-module>
+  <local-needs-module
+  title="${title}"
+  imageUrl="${imageUrl}"
+>
+  <local-need-module>
+    <tsa-text-with-icon
+      slot="title"
+      bootstrapIcon="image"
+      title="[FPO] Title"
+    ></tsa-text-with-icon>
+    <p slot="content">
+      Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididun ut labore et dolore magna aliqua. Ut
+    </p>
+  </local-need-module>
+  <local-need-module>
+    <tsa-text-with-icon
+      slot="title"
+      bootstrapIcon="image"
+      title="[FPO] Title"
+    ></tsa-text-with-icon>
+    <p slot="content">
+      Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididun ut labore et dolore magna aliqua. Ut
+    </p>
+  </local-need-module>
+  <local-need-module>
+    <tsa-text-with-icon
+      slot="title"
+      bootstrapIcon="image"
+      title="[FPO] Title"
+    ></tsa-text-with-icon>
+    <p slot="content">
+      Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididun ut labore et dolore magna aliqua. Ut
+    </p>
+  </local-need-module>
+</local-needs-module>
     `;
 };

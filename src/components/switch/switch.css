@@ -53,11 +53,11 @@
     }
 }
 
-& .tsa-switch[toggled] .tsa-switch__thumb {
+.tsa-switch[toggled] .tsa-switch__thumb {
     left: 4.5rem;
 }
 
-& .tsa-switch[toggled] .tsa-switch__label {
+.tsa-switch[toggled] .tsa-switch__label {
     & :first-child {
         opacity: 1;
     }

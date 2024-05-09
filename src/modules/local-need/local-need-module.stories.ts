@@ -20,6 +20,6 @@ export const Example: Story = {
     title: '[FPO] Title',
     content:
       'Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut',
-    icon: '<i slot="icon" class="bi bi-image"></i>'
+    icon: 'image'
   }
 };

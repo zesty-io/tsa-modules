@@ -37,18 +37,16 @@ export class LocalNeedModule extends HTMLElement {
   }
 
   connectedCallback() {
-    const title = this.getAttribute('title');
-
     if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
         <div class="local-need">
             <div class="local-need__header">
               <span><slot name="icon"></slot></span> 
-              <h1>${title}</h1>
+              <slot name="title"></slot>
             </div>
             <div class="local-need__content">
-              <slot></slot>
+              <slot name="content"></slot>
             </div>
         </div>
       `;
@@ -64,9 +62,9 @@ export interface LocalNeedProps {
 
 export const LocalNeed = ({ title, content, icon }: LocalNeedProps) => {
   return `
-    <local-need-module title="${title}">
-        ${icon}
-        <p>
+    <local-need-module>
+        <tsa-text-with-icon slot="title" bootstrapIcon="${icon}" title="${title}"></tsa-text-with-icon>
+        <p slot="content">
           ${content}
         </p>
     </local-need-module>
