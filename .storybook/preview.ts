@@ -1,5 +1,4 @@
 import type { Preview } from '@storybook/html';
-import { register } from 'swiper/element/bundle';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withConsole, setConsoleOptions } from '@storybook/addon-console';
 
@@ -15,6 +14,8 @@ import { ImageButtonTextModule } from '../src/modules/image-button-text/image-bu
 import { HeroModule } from '../src/modules/hero/hero-module';
 import { HeaderModule } from '../src/modules/header/header-module';
 import { HeaderLocationModule } from '../src/modules/header-location/header-location-module';
+import { ImageButtonTextLeftModule } from '../src/modules/image-button-text-left/image-button-text-left-module';
+import { TSAServiceItemModule } from '../src/modules/service-item/service-item';
 
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SwitchComponent } from '../src/components/switch/switch';
@@ -45,8 +46,11 @@ customElements.define('tsa-services', TSAServicesModule);
 customElements.define('tsa-stories-single', TSAStoriesSingleModule);
 customElements.define('tsa-dropdown', DropdownComponent);
 customElements.define('tsa-dropdown-item', DropdownItemComponent);
+customElements.define('image-button-text', ImageButtonTextLeftModule);
+customElements.define('service-item', TSAServiceItemModule);
 
-register();
+// register();
+
 
 const preview: Preview = {
   parameters: {
