@@ -16,6 +16,7 @@ import { HeaderModule } from '../src/modules/header/header-module';
 import { HeaderLocationModule } from '../src/modules/header-location/header-location-module';
 import { ImageButtonTextLeftModule } from '../src/modules/image-button-text-left/image-button-text-left-module';
 import { TSAServiceItemModule } from '../src/modules/service-item/service-item';
+import { MapHeaderModule } from '../src/modules/map-header/map-header-module';
 
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SwitchComponent } from '../src/components/switch/switch';
@@ -49,8 +50,9 @@ customElements.define('tsa-dropdown-item', DropdownItemComponent);
 customElements.define('image-button-text', ImageButtonTextLeftModule);
 customElements.define('service-item', TSAServiceItemModule);
 
-// register();
+customElements.define('map-header-module', MapHeaderModule);
 
+// register();
 
 const preview: Preview = {
   parameters: {
