@@ -10,11 +10,11 @@ import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module'
 import { LightboxModule } from '../src/modules/lightbox/lightbox-module';
 import { StatsModule } from '../src/modules/stats/stats-module';
 import { StatsImageCardModule } from '../src/modules/stats-image-card/stats-image-card';
-import { ImageButtonTextModule } from '../src/modules/image-button-text/image-button-text-module';
+
 import { HeroModule } from '../src/modules/hero/hero-module';
 import { HeaderModule } from '../src/modules/header/header-module';
 import { HeaderLocationModule } from '../src/modules/header-location/header-location-module';
-import { ImageButtonTextLeftModule } from '../src/modules/image-button-text-left/image-button-text-left-module';
+
 import { TSAServiceItemModule } from '../src/modules/service-item/service-item';
 import { MapHeaderModule } from '../src/modules/map-header/map-header-module';
 
@@ -33,7 +33,6 @@ customElements.define('local-need-module', LocalNeedModule);
 customElements.define('local-needs-module', LocalNeedsModule);
 customElements.define('stats-module', StatsModule);
 customElements.define('stat-image-card-module', StatsImageCardModule);
-customElements.define('image-button-text-module', ImageButtonTextModule);
 customElements.define('lightbox-module', LightboxModule);
 customElements.define('header-module', HeaderModule);
 customElements.define('header-location-module', HeaderLocationModule);
@@ -47,7 +46,6 @@ customElements.define('tsa-services', TSAServicesModule);
 customElements.define('tsa-stories-single', TSAStoriesSingleModule);
 customElements.define('tsa-dropdown', DropdownComponent);
 customElements.define('tsa-dropdown-item', DropdownItemComponent);
-customElements.define('image-button-text', ImageButtonTextLeftModule);
 customElements.define('service-item', TSAServiceItemModule);
 
 customElements.define('map-header-module', MapHeaderModule);
