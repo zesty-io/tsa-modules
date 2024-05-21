@@ -1,8 +1,8 @@
 .tsa-location-card {
+    padding: 3rem;
     background-color: transparent;
     border-radius: .6rem;
     border: 1px solid var(--color-gray-light);
-    width: inherit;
 
     & .tsa-location-card__header {
         font-size: 2rem;
@@ -17,11 +17,50 @@
         }
     }
 
+    & .tsa-location-card__btns {
+        display: flex;
+        flex-direction: column;
+
+        &>* {
+            flex: 1;
+        }
+
+        & :last-child {
+            margin-top: 1rem;
+            text-wrap: nowrap;
+        }
+    }
+
+    & .tsa-location-card__info {
+
+        & .text-with-icon {
+            margin-right: 1rem;
+
+            & h6,
+            i {
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
+        }
+
+        & .tsa-location-card__info-content,
+        .tsa-location-card__info-content-address-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+
+        }
+
+        & .tsa-location-card__info-content {
+            margin-bottom: 1rem;
+        }
+    }
+
     & .tsa-location-card__controls {
         display: flex;
         font-size: 1.3rem;
-        margin-top: 1.5rem;
-        margin-left: 3rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
 
         & :first-child {
             margin-right: .5rem;
@@ -97,6 +136,25 @@
 
 @media (min-width: 840px) {
     .tsa-location-card {
+        width: 55rem;
+
+        & .tsa-location-card__btns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+
+            &>* {
+                flex: 1;
+                width: 50%;
+            }
+
+            & :last-child {
+                margin-top: 0;
+                margin-left: 1rem;
+            }
+        }
+
         & .tsa-location-card__services {
             & h2 {
                 font-size: 1.6rem;
