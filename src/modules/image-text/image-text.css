@@ -1,0 +1,11 @@
+.tsa-image-text-content {
+    text-align: center;
+
+    &>* {
+        margin-bottom: 2rem;
+    }
+
+    & :last-child {
+        margin-bottom: 0;
+    }
+}
