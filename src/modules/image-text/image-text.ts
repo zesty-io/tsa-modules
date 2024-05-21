@@ -8,11 +8,27 @@ styles.replaceSync(`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .image-container {
-       margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    @media(min-width: 1280px){
+        .container{
+            flex-direction: row;
+            align-items: flex-start;
+
+            &  .image-container{
+                margin-right: 8rem;
+                margin-bottom: 0rem;    
+            }
+        }
+
+       
     }
 `);
 
@@ -49,7 +65,7 @@ export const ImageText = ({ image, alt }: ImageTextProps) => {
         <div class="tsa-image-text-content">
             <h1 class="tsa-title">Volunteer as a Bell Ringer</h1>
             <p class="tsa-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
             </p>
             <button class="btn btn--small btn--dark--fill">Register to Ring</button>
         </div>

@@ -9,3 +9,13 @@
         margin-bottom: 0;
     }
 }
+
+@media (min-width: 1280px) {
+    .tsa-image-text-content {
+        text-align: left;
+
+        & h1 {
+            text-align: left;
+        }
+    }
+}
