@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { ImageText, ImageTextProps } from './image-text';
 
 const meta = {
-  title: 'Modules/Image Text',
+  title: 'Modules/Image Text (Left Image)',
 
   parameters: {
     layout: ['fullscreen']

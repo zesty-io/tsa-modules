@@ -47,7 +47,9 @@ export class TSAImageTextModule extends HTMLElement {
             <div part="image-container" class="image-container">
                 <img part="image" src="${this.getAttribute('image')}" alt="${this.getAttribute('alt')}"/>
             </div>
-            <slot></slot>
+            <div class="content-container">
+              <slot></slot>
+            </div>
         </div>
       `;
     }
@@ -61,7 +63,7 @@ export interface ImageTextProps {
 
 export const ImageText = ({ image, alt }: ImageTextProps) => {
   return `
-    <tsa-image-text-module image="${image}" alt="${alt}">
+    <tsa-image-text-module imagePosition="right" image="${image}" alt="${alt}">
         <div class="tsa-image-text-content">
             <h1 class="tsa-title">Volunteer as a Bell Ringer</h1>
             <p class="tsa-text">
