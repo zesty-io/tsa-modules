@@ -19,7 +19,7 @@ const date = new Date()
 
 export const Example: Story = {
   args: {
-    imageURL: 'https://mgfrnv8q.media.zestyio.com/Vector.png',
+    imageURL: 'https://w1w702z1.media.zestyio.com/image-sample-full.jpg',
     heading: '[FPO] Title',
     link: '#',
     date: date.toString(),

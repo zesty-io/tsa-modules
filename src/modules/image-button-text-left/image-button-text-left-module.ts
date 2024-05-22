@@ -119,7 +119,7 @@ export const ImageButtonTextLeft = ({
   return `
     <image-button-text-left-module title="${title}" imageUrl="${imageUrl}" imagePosition="${imagePosition}">
         <div id="ibt">
-            <p>${content}</p>
+            ${content}
             <div slot="cta" id="ibt__cta">
               <button type="button" class="btn btn--small btn--dark--fill">[FPO] Primary Button</button>
               <button type="button" class="btn btn--small btn--dark--outline">[FPO] Secondary Button</button>

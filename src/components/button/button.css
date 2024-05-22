@@ -151,15 +151,15 @@
 /* **** Sizes **** */
 
 .btn--small {
-    padding: 1.2rem 1.4rem;
+    padding: 1rem 1.4rem;
 }
 
 .btn--medium {
-    padding: 1.6rem 1.8rem;
+    padding: 1.4rem 1.6rem;
 }
 
 .btn--large {
-    padding: 2rem 2.2rem;
+    padding: 1.6rem 1.8rem;
 }
 
 .btn--fullWidth {

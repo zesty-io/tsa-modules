@@ -16,6 +16,8 @@ import { HeaderModule } from '../src/modules/header/header-module';
 import { HeaderLocationModule } from '../src/modules/header-location/header-location-module';
 import { ImageButtonTextLeftModule } from '../src/modules/image-button-text-left/image-button-text-left-module';
 import { TSAServiceItemModule } from '../src/modules/service-item/service-item';
+import {TSAEventsSingleModule} from '../src/modules/events-single/events-single';
+import {TSAEventsListModule} from '../src/modules/events-list/events-list';
 
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SwitchComponent } from '../src/components/switch/switch';
@@ -26,6 +28,8 @@ import { TSAServicesModule } from '../src/modules/services-list/services-list';
 import { TSAStoriesSingleModule } from '../src/modules/stories-single/stories-single';
 import { DropdownComponent } from '../src/components/dropdown/dropdown';
 import { DropdownItemComponent } from '../src/components/dropdown/dropdown-item';
+import { AccordionItemComponent } from '../src/components/accordion-item/accordion-item';
+import { PaginatedListModule } from '../src/modules/paginated-list/paginated-list';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -48,6 +52,10 @@ customElements.define('tsa-dropdown', DropdownComponent);
 customElements.define('tsa-dropdown-item', DropdownItemComponent);
 customElements.define('image-button-text', ImageButtonTextLeftModule);
 customElements.define('service-item', TSAServiceItemModule);
+customElements.define('accordion-item', AccordionItemComponent);
+customElements.define('tsa-events-single', TSAEventsSingleModule);
+customElements.define('tsa-events-list', TSAEventsListModule);
+customElements.define('tsa-paginated-list', PaginatedListModule);
 
 // register();
 
