@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/html';
-import { Title, TitleProps } from './Title';
+import { Title, TitleProps } from './title';
 
 const meta = {
   title: 'Components/Title',
