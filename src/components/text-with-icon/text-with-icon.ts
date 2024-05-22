@@ -23,6 +23,6 @@ export interface TextWithIconProps {
 
 export const TextWithIcon = ({ icon, title }: TextWithIconProps) => {
   return `
-    <tsa-text-with-icon bootstrapIcon="${icon}", title="${title}"></tsa-text-with-icon>
+    <tsa-text-with-icon bootstrapIcon="${icon}" title="${title}"></tsa-text-with-icon>
     `;
 };
