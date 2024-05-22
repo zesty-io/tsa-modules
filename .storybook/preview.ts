@@ -18,6 +18,7 @@ import { HeaderLocationModule } from '../src/modules/header-location/header-loca
 import { TSAServiceItemModule } from '../src/modules/service-item/service-item';
 import { MapHeaderModule } from '../src/modules/map-header/map-header-module';
 import { TSAImageTextModule } from '../src/modules/image-text/image-text';
+import { TSAImageTextRightModule } from '../src/modules/image-text-right/image-text-right';
 
 import { TSATextWithIconComponent } from '../src/components/text-with-icon/text-with-icon';
 import { SwitchComponent } from '../src/components/switch/switch';
@@ -38,6 +39,7 @@ customElements.define('lightbox-module', LightboxModule);
 customElements.define('header-module', HeaderModule);
 customElements.define('header-location-module', HeaderLocationModule);
 customElements.define('tsa-image-text-module', TSAImageTextModule);
+customElements.define('tsa-image-text-right-module', TSAImageTextRightModule);
 
 customElements.define('tsa-text-with-icon', TSATextWithIconComponent);
 customElements.define('tsa-switch', SwitchComponent);
