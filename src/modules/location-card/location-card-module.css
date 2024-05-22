@@ -2,7 +2,6 @@
     padding: 3rem;
     background-color: transparent;
     border-radius: .6rem;
-    border: 1px solid var(--color-gray-light);
 
     & .tsa-location-card__header {
         font-size: 2rem;
@@ -41,6 +40,13 @@
                 font-size: 1.3rem;
                 font-weight: 500;
             }
+        }
+
+        & .tsa-location-card__info__hours {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
         }
 
         & .tsa-location-card__info-content,

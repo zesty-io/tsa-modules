@@ -2,6 +2,9 @@ import type { Preview } from '@storybook/html';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withConsole, setConsoleOptions } from '@storybook/addon-console';
 
+import '../bootstrap/bootstrap.bundle';
+import '../bootstrap/bootstrap.min.css';
+
 import '../src/styles/index.css';
 import '../src/styles/variables.css';
 
