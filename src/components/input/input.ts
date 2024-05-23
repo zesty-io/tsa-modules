@@ -21,7 +21,7 @@ export const Input = ({
 }: InputProps) => {
   return `
     <label class="input">
-        <span class="placeholder">${label}</span>
+        <span>${label}</span>
         <input class="input--${size}" name="${name}" value="${value}" placeholder="${placeholder}" type="${type}" ${disabled && 'disabled'}/>
     </label>
   `;
