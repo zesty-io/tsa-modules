@@ -132,8 +132,6 @@ export const TSAStoriesSingle = ({ date, heading, link, imageURL, content }: TSA
       <img slot="imageURL" src="${imageURL}" alt="sample image" />
       <a slot="link" href="${link}" class="btn btn--small btn--dark--outline btn--fullWidth">[FPO] Read More</a>   
     </tsa-stories-single>
-    
-    
   `
 };
 

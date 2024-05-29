@@ -36,6 +36,9 @@ import { DropdownComponent } from '../src/components/dropdown/dropdown';
 import { DropdownItemComponent } from '../src/components/dropdown/dropdown-item';
 import { AccordionItemComponent } from '../src/components/accordion-item/accordion-item';
 import { PaginatedListModule } from '../src/modules/paginated-list/paginated-list';
+import { StoriesModule } from '../src/modules/stories/stories';
+import { TSAImageTextTopModule } from '../src/modules/image-text-top/image-text-top';
+import {ImageTextListModule} from '../src/modules/image-text-list/image-text-list';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -62,6 +65,9 @@ customElements.define('accordion-item', AccordionItemComponent);
 customElements.define('tsa-events-single', TSAEventsSingleModule);
 customElements.define('tsa-events-list', TSAEventsListModule);
 customElements.define('tsa-paginated-list', PaginatedListModule);
+customElements.define('tsa-stories', StoriesModule);
+customElements.define('tsa-image-text-top-module', TSAImageTextTopModule);
+customElements.define('tsa-image-text-list', ImageTextListModule)
 
 customElements.define('map-header-module', MapHeaderModule);
 
