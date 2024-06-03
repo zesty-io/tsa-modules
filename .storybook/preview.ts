@@ -38,7 +38,9 @@ import { AccordionItemComponent } from '../src/components/accordion-item/accordi
 import { PaginatedListModule } from '../src/modules/paginated-list/paginated-list';
 import { StoriesModule } from '../src/modules/stories/stories';
 import { TSAImageTextTopModule } from '../src/modules/image-text-top/image-text-top';
-import {ImageTextListModule} from '../src/modules/image-text-list/image-text-list';
+import { ImageTextListModule } from '../src/modules/image-text-list/image-text-list';
+import { NewsArchiveHeaderModule } from '../src/modules/news-archive-header/news-archive-header';
+import { HeroTextModule } from '../src/modules/hero-text/hero-text-module';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -67,7 +69,9 @@ customElements.define('tsa-events-list', TSAEventsListModule);
 customElements.define('tsa-paginated-list', PaginatedListModule);
 customElements.define('tsa-stories', StoriesModule);
 customElements.define('tsa-image-text-top-module', TSAImageTextTopModule);
-customElements.define('tsa-image-text-list', ImageTextListModule)
+customElements.define('tsa-image-text-list', ImageTextListModule);
+customElements.define('tsa-news-archive-header', NewsArchiveHeaderModule);
+customElements.define('tsa-hero-text', HeroTextModule);
 
 customElements.define('map-header-module', MapHeaderModule);
 
