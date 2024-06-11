@@ -23,7 +23,6 @@ style.replaceSync (
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 35px 20px 35px 20px;
 
     & tsa-text,
     tsa-title {

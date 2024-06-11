@@ -41,6 +41,10 @@ import { TSAImageTextTopModule } from '../src/modules/image-text-top/image-text-
 import { ImageTextListModule } from '../src/modules/image-text-list/image-text-list';
 import { NewsArchiveHeaderModule } from '../src/modules/news-archive-header/news-archive-header';
 import { HeroTextModule } from '../src/modules/hero-text/hero-text-module';
+import { EventsSingleDetailModule } from '../src/modules/event-single-detail/event-single-detail';
+import { EventSingleContentModule } from '../src/modules/event-single-content/event-single-content';
+import { EventSingleHeaderModule } from '../src/modules/event-single-header/event-single-header';
+import { TSAOtherEventsListModule } from '../src/modules/other-events-list/other-events-list';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -72,6 +76,10 @@ customElements.define('tsa-image-text-top-module', TSAImageTextTopModule);
 customElements.define('tsa-image-text-list', ImageTextListModule);
 customElements.define('tsa-news-archive-header', NewsArchiveHeaderModule);
 customElements.define('tsa-hero-text', HeroTextModule);
+customElements.define('tsa-event-detail', EventsSingleDetailModule);
+customElements.define('tsa-event-single-content', EventSingleContentModule);
+customElements.define('tsa-event-single-header', EventSingleHeaderModule);
+customElements.define('tsa-other-events', TSAOtherEventsListModule);
 
 customElements.define('map-header-module', MapHeaderModule);
 
