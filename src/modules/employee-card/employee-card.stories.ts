@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { EmployeeCard } from './employee-card';
 
 const meta = {
-  title: 'Module/Employee Card',
+  title: 'Modules/Employee Card',
   parameters: {
     layout: 'centered'
   },
