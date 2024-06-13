@@ -19,8 +19,8 @@ import { HeaderModule } from '../src/modules/header/header-module';
 import { HeaderLocationModule } from '../src/modules/header-location/header-location-module';
 
 import { TSAServiceItemModule } from '../src/modules/service-item/service-item';
-import {TSAEventsSingleModule} from '../src/modules/events-single/events-single';
-import {TSAEventsListModule} from '../src/modules/events-list/events-list';
+import { TSAEventsSingleModule } from '../src/modules/events-single/events-single';
+import { TSAEventsListModule } from '../src/modules/events-list/events-list';
 import { MapHeaderModule } from '../src/modules/map-header/map-header-module';
 import { TSAImageTextModule } from '../src/modules/image-text/image-text';
 import { TSAImageTextRightModule } from '../src/modules/image-text-right/image-text-right';
@@ -45,6 +45,8 @@ import { EventsSingleDetailModule } from '../src/modules/event-single-detail/eve
 import { EventSingleContentModule } from '../src/modules/event-single-content/event-single-content';
 import { EventSingleHeaderModule } from '../src/modules/event-single-header/event-single-header';
 import { TSAOtherEventsListModule } from '../src/modules/other-events-list/other-events-list';
+
+import { MainWaysToGiveModule } from '../src/features/ways-to-give/main-ways-to-give/main-ways-to-give';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -80,6 +82,7 @@ customElements.define('tsa-event-detail', EventsSingleDetailModule);
 customElements.define('tsa-event-single-content', EventSingleContentModule);
 customElements.define('tsa-event-single-header', EventSingleHeaderModule);
 customElements.define('tsa-other-events', TSAOtherEventsListModule);
+customElements.define('tsa-main-ways-to-give', MainWaysToGiveModule);
 
 customElements.define('map-header-module', MapHeaderModule);
 
