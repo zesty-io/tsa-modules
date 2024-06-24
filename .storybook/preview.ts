@@ -47,6 +47,7 @@ import { EventSingleHeaderModule } from '../src/modules/event-single-header/even
 import { TSAOtherEventsListModule } from '../src/modules/other-events-list/other-events-list';
 
 import { MainWaysToGiveModule } from '../src/features/ways-to-give/main-ways-to-give/main-ways-to-give';
+import { MoreWayToGiveAccordionModule } from '../src/features/ways-to-give/more-ways-to-give/more-ways-to-give';
 
 customElements.define('hero-module', HeroModule);
 customElements.define('local-need-module', LocalNeedModule);
@@ -83,6 +84,7 @@ customElements.define('tsa-event-single-content', EventSingleContentModule);
 customElements.define('tsa-event-single-header', EventSingleHeaderModule);
 customElements.define('tsa-other-events', TSAOtherEventsListModule);
 customElements.define('tsa-main-ways-to-give', MainWaysToGiveModule);
+customElements.define('tsa-more-ways-to-give-accordion', MoreWayToGiveAccordionModule);
 
 customElements.define('map-header-module', MapHeaderModule);
 

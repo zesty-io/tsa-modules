@@ -1,0 +1,12 @@
+#more-ways {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid #999999;
+    padding: 3.2rem 1.6rem;
+
+}
+
+#more-ways>*:not(:last-child) {
+    margin-bottom: 2rem;
+}
