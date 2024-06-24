@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { Lightbox, LightboxProps } from './lightbox-module';
 
 const meta = {
-  title: 'Modules/Lightbox',
+  title: 'Features/Common/Lightbox',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered'

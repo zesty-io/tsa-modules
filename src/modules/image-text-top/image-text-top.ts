@@ -1,5 +1,5 @@
 import './image-text-top.css';
-import { ImageTextProps } from '../image-text/image-text';
+import { ImageTextProps } from '../../../modules/image-text/image-text';
 
 const styles = new CSSStyleSheet();
 

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { HeaderLocation, HeaderLocationProps } from './header-location-module';
 
 const meta = {
-  title: 'Modules/Header Location',
+  title: 'Features/Common/Header Location',
   tags: ['autodocs'],
   render: (args) => HeaderLocation(args)
 } satisfies Meta<HeaderLocationProps>;

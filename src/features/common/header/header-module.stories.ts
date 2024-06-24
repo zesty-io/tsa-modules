@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { Header, HeaderProps } from './header-module';
 
 const meta = {
-  title: 'Modules/Header',
+  title: 'Features/Common/Header',
   tags: ['autodocs'],
   render: (args) => Header(args)
 } satisfies Meta<HeaderProps>;

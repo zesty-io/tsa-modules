@@ -3,7 +3,7 @@ import { ImageTextRight } from './image-text-right';
 import { ImageTextProps } from '../image-text/image-text';
 
 const meta = {
-  title: 'Modules/Image Text (Right Image)',
+  title: 'Features/Common/Image Text (Right Image)',
 
   parameters: {
     layout: ['fullscreen']

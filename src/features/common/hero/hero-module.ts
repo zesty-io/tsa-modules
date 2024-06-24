@@ -1,4 +1,4 @@
-import '../../components/button/button.css';
+import '../../../components/button/button.css';
 import './hero-module.css';
 
 const styles = new CSSStyleSheet();

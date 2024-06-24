@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { Hero, HeroProps } from './hero-module';
 
 const meta = {
-  title: 'Modules/Hero',
+  title: 'Features/Common/Hero',
   parameters: {
     layout: 'fullscreen'
   },
