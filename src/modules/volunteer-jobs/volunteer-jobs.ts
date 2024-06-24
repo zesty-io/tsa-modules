@@ -1,5 +1,5 @@
 import './volunteer-jobs.css';
-import '../paginated-list/paginated-list.css';
+import '../../features/common/paginated-list/paginated-list.css';
 
 export const VolunteerJobs = () => {
   return `
