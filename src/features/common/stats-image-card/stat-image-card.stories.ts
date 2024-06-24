@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/html';
 import { StatImageCard, StatImageCardProps } from './stats-image-card';
 
 const meta = {
-  title: 'Modules/Stat Image Card',
+  title: 'Features/Common/Stat Image Card',
   tags: ['autodocs'],
   parameters: {
     layout: 'centered'

@@ -11,8 +11,8 @@ import '../src/styles/variables.css';
 import { LocalNeedModule } from '../src/modules/local-need/local-need-module';
 import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module';
 import { LightboxModule } from '../src/features/common/lightbox/lightbox-module';
-import { StatsModule } from '../src/modules/stats/stats-module';
-import { StatsImageCardModule } from '../src/modules/stats-image-card/stats-image-card';
+import { StatsModule } from '../src/features/common/stats/stats-module';
+import { StatsImageCardModule } from '../src/features/common/stats-image-card/stats-image-card';
 
 import { HeroModule } from '../src/features/common/hero/hero-module';
 
