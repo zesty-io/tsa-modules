@@ -77,6 +77,7 @@ accordionItemCss.replaceSync(`
 export class AccordionItemComponent extends HTMLElement {
   private header: string | null;
   private isOpen: boolean | null;
+  private subtext: string | null;
   constructor() {
     super();
 
@@ -84,11 +85,15 @@ export class AccordionItemComponent extends HTMLElement {
 
     this.header = this.getAttribute('title');
     this.isOpen = false;
+    this.subtext = this.getAttribute('subtext');
 
     accordionItemTemplate.innerHTML = `
       <div class="accordion-item">
         <div class="accordion-header">
-          <h3>${this.header}</h3>
+          <div>
+            <h3>${this.header}</h3>
+            <span>${this.subtext}</span>
+          </div>
           <div class="accordion-toggle">
             <span class="line-1"></span>
             <span class="line-2"></span>
@@ -137,11 +142,12 @@ export class AccordionItemComponent extends HTMLElement {
 
 export interface AccordionItemProps {
   header?: string,
+  subtext?: string,
 }
 
-export const AccordionItem = ({header}: AccordionItemProps) => {
+export const AccordionItem = ({header, subtext}: AccordionItemProps) => {
  return  `
-  <accordion-item title="${header}">
+  <accordion-item title="${header}" subtext="${subtext}">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </accordion-item>
   `

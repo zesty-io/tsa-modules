@@ -10,10 +10,12 @@ style.replaceSync(`
 }
 
 #dropdown-input {
-  padding: 8px 12px;
   border: 1px solid #000000;
   border-radius: 5px;
   width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1.6rem;
 }
 
 .dropdown-menu {
@@ -28,6 +30,7 @@ style.replaceSync(`
   border: 1px solid #000000;
   padding: 12px;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .dropdown-item {
@@ -60,6 +63,7 @@ style.replaceSync(`
   border-bottom: 1px solid #5a5d5d;
   border-top: 1px solid #5a5d5d;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .close-btn {
@@ -276,10 +280,27 @@ input[type='checkbox']::checked {
   background: #000;
   color: #fff;
 }
+.input--large {
+  padding: 1.4rem 1.6rem;
+}
+.dropdown .dropdown__label {
+  margin-bottom: .8rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  display: block;
+}
+
+@media (max-width: 769px) {
+  .dropdown label {
+    font-size: 1.2rem;
+  }
+}
 `)
 
 export class SelectModule extends HTMLElement {
   private selectItems: { label: string; value: string }[];
+  private label: string | null;
+  private placeholder: string | null;
 
   constructor() {
     super();
@@ -289,6 +310,8 @@ export class SelectModule extends HTMLElement {
     const optionsAttr  = this.getAttribute('options');
     const optionsItems: { label: string; value: string }[] = optionsAttr ? JSON.parse(optionsAttr) : [];
     this.selectItems = optionsItems;
+    this.label = this.getAttribute('label');
+    this.placeholder = this.getAttribute('placeholder');
 
     let optionsHTML = '';
     optionsItems.map((option) => {
@@ -302,7 +325,8 @@ export class SelectModule extends HTMLElement {
 
     template.innerHTML = `
       <div id="dropdown" class="dropdown">
-        <input type="text" id="dropdown-input" placeholder="What services are you looking for?" readonly>
+        <label for="dropdown-input" class="dropdown__label">${this.label}</label>
+        <input class="input--large" type="text" id="dropdown-input" placeholder="${this.placeholder}" readonly>
         <div id="dropdown-menu" class="dropdown-menu">
           ${optionsHTML}
           <div class="dropdown-buttons">
@@ -339,6 +363,7 @@ export class SelectModule extends HTMLElement {
       dropdownInput?.addEventListener('click', this.toggleDropdown.bind(this));
       clearBtn?.addEventListener('click', this.clearSelectors.bind(this));
       applyBtn?.addEventListener('click', this.applySelectors.bind(this));
+      cancelBtn?.addEventListener('click', this.toggleDropdown.bind(this));
       window.addEventListener('click', this.handleOutsideClick.bind(this));
     }
   }
@@ -382,8 +407,6 @@ export class SelectModule extends HTMLElement {
   handleOutsideClick(event: MouseEvent | null) {
     const dropdownInput = this.shadowRoot?.querySelector('#dropdown-input');
     const dropdownMenu = this.shadowRoot?.querySelector('#dropdown-menu');
-    
-    console.log(event?.target);
   
     if (dropdownMenu && dropdownMenu.contains(event?.target as Node) && event?.target !== dropdownInput) {
       (dropdownMenu as HTMLElement).style.display = 'none';
@@ -399,10 +422,12 @@ export interface Option {
 
 export interface SelectProps {
   options?: string;
+  label?: string;
+  placeholder?: string;
 }
 
-export const Select = ({ options }: SelectProps) => {
+export const Select = ({ options, label, placeholder }: SelectProps) => {
   return `
-    <tsa-select options='${options}'></tsa-select>
+    <tsa-select options='${options}' label='${label}' placeholder='${placeholder}'></tsa-select>
   `
 }

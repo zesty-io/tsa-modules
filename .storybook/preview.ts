@@ -46,6 +46,13 @@ import { EventsSingleDetailModule } from '../src/modules/event-single-detail/eve
 import { EventSingleContentModule } from '../src/modules/event-single-content/event-single-content';
 import { EventSingleHeaderModule } from '../src/modules/event-single-header/event-single-header';
 import { TSAOtherEventsListModule } from '../src/modules/other-events-list/other-events-list';
+import { TSAJumpToSectionModule } from '../src/modules/jump-to-section/jump-to-section';
+import { TextWithIconListModule } from '../src/modules/text-with-icon-list/text-with-icon-list';
+import { ImageBoxTextModule } from '../src/modules/image-box-text/image-box-text';
+import { ImageTextBoxListModule } from '../src/modules/image-text-box-list/image-text-box-list';
+import { ReadMoreCardModule } from '../src/modules/read-more-card/read-more-card';
+import { ReadMoreCardListModule } from '../src/modules/read-more-card-list/read-more-card-list';
+import { FindHelpModule } from '../src/modules/find-help-modal/find-help-modal';
 
 import { MainWaysToGiveModule } from '../src/features/ways-to-give/main-ways-to-give/main-ways-to-give';
 import { MoreWayToGiveAccordionModule } from '../src/features/ways-to-give/more-ways-to-give/more-ways-to-give';
@@ -86,6 +93,13 @@ customElements.define('tsa-event-single-header', EventSingleHeaderModule);
 customElements.define('tsa-other-events', TSAOtherEventsListModule);
 customElements.define('tsa-main-ways-to-give', MainWaysToGiveModule);
 customElements.define('tsa-more-ways-to-give-accordion', MoreWayToGiveAccordionModule);
+customElements.define('tsa-jump-to-section', TSAJumpToSectionModule);
+customElements.define('tsa-text-with-icon-list', TextWithIconListModule);
+customElements.define('tsa-image-text-box', ImageBoxTextModule);
+customElements.define('tsa-image-text-box-list', ImageTextBoxListModule);
+customElements.define('read-more-card', ReadMoreCardModule);
+customElements.define('tsa-read-more-card-list', ReadMoreCardListModule);
+customElements.define('tsa-find-help', FindHelpModule);
 
 customElements.define('map-header-module', MapHeaderModule);
 

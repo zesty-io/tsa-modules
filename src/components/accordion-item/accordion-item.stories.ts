@@ -23,5 +23,6 @@ type Story = StoryObj<AccordionItemProps>;
 export const Example: Story = {
   args: {
     header: '[FPO] TITLE',
+    subtext: '$500,000 - $999,999 Cumulative Giving in Single Year'
   }
 };

@@ -21,6 +21,10 @@ styles.replaceSync(`
             align-items: center;
             justify-content: center;
             // font-size: 1rem;
+
+            @media (max-width: 769px) {
+              right: 0;
+            }
         }
 
         & .lightbox__header{
@@ -31,6 +35,10 @@ styles.replaceSync(`
                 font-weight: 200;
                 text-align: center;
                 line-height: 5.76rem;
+                
+                @media (max-width: 769px) {
+                  font-size: 2.8rem;
+                }
             }
         }
 
@@ -86,8 +94,6 @@ export class LightboxModule extends HTMLElement {
   }
 
   attributeChangedCallback(name: string, _oldValue: string, _newValue: string) {
-    // console.log(`Attribute ${name} has changed from ${oldValue} to ${newValue}.`);
-
     const root = this.shadowRoot;
     const dialog = root?.querySelector('dialog');
 
