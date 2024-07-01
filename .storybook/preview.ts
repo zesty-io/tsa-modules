@@ -5,9 +5,6 @@ import { withConsole } from '@storybook/addon-console';
 import '../bootstrap/bootstrap.bundle';
 import '../bootstrap/bootstrap.min.css';
 
-import '../src/styles/index.css';
-import '../src/styles/variables.css';
-
 import { LocalNeedModule } from '../src/modules/local-need/local-need-module';
 import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module';
 import { LightboxModule } from '../src/features/common/lightbox/lightbox-module';

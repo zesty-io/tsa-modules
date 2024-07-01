@@ -1,4 +1,4 @@
-import './stat-image-card.css';
+import './stat-image-card.scss';
 
 const styles = new CSSStyleSheet();
 
