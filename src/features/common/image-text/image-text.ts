@@ -1,4 +1,4 @@
-import './image-text.css';
+import './image-text.scss';
 
 const styles = new CSSStyleSheet();
 

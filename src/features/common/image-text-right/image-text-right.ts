@@ -1,5 +1,5 @@
 import { ImageTextProps } from '../image-text/image-text';
-import './image-text-right.css';
+import './image-text-right.scss';
 
 const styles = new CSSStyleSheet();
 

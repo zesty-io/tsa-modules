@@ -1,4 +1,4 @@
-import './image-text-top.css';
+import './image-text-top.scss';
 import { ImageTextProps } from '../image-text/image-text';
 
 const styles = new CSSStyleSheet();
