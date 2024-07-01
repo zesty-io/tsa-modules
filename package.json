@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@storybook/addon-viewport": "^8.0.8",
+    "sass": "^1.77.6",
     "swiper": "^11.1.1"
   }
 }

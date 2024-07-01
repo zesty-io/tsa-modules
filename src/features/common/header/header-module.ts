@@ -1,4 +1,4 @@
-import './header-module.css';
+import './header-module.scss';
 
 export class HeaderModule extends HTMLElement {
   constructor() {

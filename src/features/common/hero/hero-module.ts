@@ -1,5 +1,5 @@
 import '../../../components/button/button.css';
-import './hero-module.css';
+import './hero-module.scss';
 
 const styles = new CSSStyleSheet();
 
