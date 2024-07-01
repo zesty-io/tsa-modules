@@ -1,4 +1,4 @@
-import './stats-module.css';
+import './stats-module.scss';
 
 const styles = new CSSStyleSheet();
 
