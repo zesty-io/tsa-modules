@@ -2,8 +2,11 @@ import type { Preview } from '@storybook/html';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withConsole } from '@storybook/addon-console';
 
-import '../bootstrap/bootstrap.bundle';
+import '../bootstrap/bootstrap.bundle.js';
 import '../bootstrap/bootstrap.min.css';
+
+import '../src/styles/variables.css';
+import '../src/styles/index.css';
 
 import { LocalNeedModule } from '../src/modules/local-need/local-need-module';
 import { LocalNeedsModule } from '../src/modules/local-needs/local-needs-module';
