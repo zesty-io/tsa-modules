@@ -1,4 +1,4 @@
-import './paginated-list.css';
+import './paginated-list.scss';
 export class PaginatedListModule extends HTMLElement {
   private currentPage: number;
   private itemsPerPage: number;
