@@ -1,4 +1,4 @@
-import './header-location-module.css';
+import './header-location-module.scss';
 
 const styles = new CSSStyleSheet();
 
