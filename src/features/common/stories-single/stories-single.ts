@@ -1,5 +1,5 @@
 import '../../../components/button/button.css';
-import './stories-single.css';
+import './stories-single.scss';
 
 const template = document.createElement('template');
 

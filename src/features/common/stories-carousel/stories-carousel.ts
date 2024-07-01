@@ -1,35 +1,39 @@
-
 import { register } from 'swiper/element/bundle';
-import './stories-carousel.css';
+import './stories-carousel.scss';
 
 register();
 
 export interface TSAStoriesCarouselProps {
-    imageURL?: string,
-    heading?: string,
-    date?: string,
-    link?: string,
-    content?: string,
+  imageURL?: string;
+  heading?: string;
+  date?: string;
+  link?: string;
+  content?: string;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // const mySwiper = new Swiper('.swiper-container', {
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     cssMode: true,
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true,
-    //     },
-    // });
+  // const mySwiper = new Swiper('.swiper-container', {
+  //     slidesPerView: 1,
+  //     speed: 500,
+  //     cssMode: true,
+  //     navigation: {
+  //         nextEl: '.swiper-button-next',
+  //         prevEl: '.swiper-button-prev',
+  //     },
+  //     pagination: {
+  //         el: '.swiper-pagination',
+  //         clickable: true,
+  //     },
+  // });
 });
 
-
-export const TSAStoriesCarousel = ({date, heading, link, imageURL, content}: TSAStoriesCarouselProps) => {
+export const TSAStoriesCarousel = ({
+  date,
+  heading,
+  link,
+  imageURL,
+  content
+}: TSAStoriesCarouselProps) => {
   return `
     <div>
         <swiper-container init="false">
@@ -71,5 +75,5 @@ export const TSAStoriesCarousel = ({date, heading, link, imageURL, content}: TSA
             </swiper-slide>
         </swiper-container>
     </div>
-  `
-}
+  `;
+};

@@ -1,5 +1,5 @@
 import '../../../components/title/title.css';
-import './stories.css';
+import './stories.scss';
 
 const storiesTemplate = document.createElement('template');
 
