@@ -1,4 +1,4 @@
-import './lightbox-module.css';
+import './lightbox-module.scss';
 
 const styles = new CSSStyleSheet();
 
