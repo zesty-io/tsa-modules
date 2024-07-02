@@ -1,13 +1,11 @@
 // const newsArchiveHeaderTemplate = document.createElement('template');
-import './news-archive-header.css';
+import './news-archive-header.scss';
 
 export class NewsArchiveHeaderModule extends HTMLElement {
   private heading: string | null;
   constructor() {
     super();
     this.heading = this.getAttribute('heading');
-
-    
   }
 
   connectedCallback() {
@@ -44,16 +42,16 @@ export class NewsArchiveHeaderModule extends HTMLElement {
           </div>
         </div>
       <div>
-    `
+    `;
   }
 }
 
 export interface NewsArchiveHeaderProps {
-  heading?: string
+  heading?: string;
 }
 
-export const NewsArchiveHeader = ({heading}: NewsArchiveHeaderProps) => {
-  return`
+export const NewsArchiveHeader = ({ heading }: NewsArchiveHeaderProps) => {
+  return `
     <tsa-news-archive-header heading="${heading}"></tsa-news-archive-header>
-  `
-}
+  `;
+};

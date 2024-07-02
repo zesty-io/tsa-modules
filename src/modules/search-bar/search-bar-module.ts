@@ -1,7 +1,6 @@
-import './search-bar-module.css';
+import './search-bar-module.scss';
 import '../../components/button/button.css';
 
- 
 const template = document.createElement('template');
 
 const styles = new CSSStyleSheet();
@@ -269,8 +268,6 @@ export class SearchBarModule extends HTMLElement {
         <button type="button" class="btn btn--small btn--dark--fill" onclick="${this.onClick}">${this.buttonText}</button>
     </div>
     </div>`;
-
-      
   }
 
   static get observedAttributes() {
@@ -282,7 +279,7 @@ export class SearchBarModule extends HTMLElement {
   }
 
   connectedCallback() {
-    if(this.shadowRoot) {
+    if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
@@ -312,7 +309,7 @@ export const SearchBar = ({
   buttonText = '',
   label,
   onClick,
-  options,
+  options
 }: SearchBarProps) => {
   return `
     <search-bar 

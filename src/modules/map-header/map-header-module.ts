@@ -1,4 +1,4 @@
-import './map-header-module.css';
+import './map-header-module.scss';
 
 export class MapHeaderModule extends HTMLElement {
   constructor() {

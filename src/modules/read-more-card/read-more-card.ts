@@ -1,4 +1,4 @@
-import './read-more-card.css';
+import './read-more-card.scss';
 
 export class ReadMoreCardModule extends HTMLElement {
   private imgUrl: string | null;
@@ -50,27 +50,27 @@ export class ReadMoreCardModule extends HTMLElement {
     `;
 
     this.querySelector('.flip-link')?.addEventListener('click', (event) => {
-        event.preventDefault();
-        this.querySelector('.flip-card-inner')?.classList.add('flipped');
+      event.preventDefault();
+      this.querySelector('.flip-card-inner')?.classList.add('flipped');
     });
 
     this.querySelector('.flip-link-back')?.addEventListener('click', (event) => {
-        event.preventDefault();
-        this.querySelector('.flip-card-inner')?.classList.remove('flipped');
+      event.preventDefault();
+      this.querySelector('.flip-card-inner')?.classList.remove('flipped');
     });
   }
 }
 
 export interface ReadMoreCardProps {
-  imgUrl?: string,
-  heading?: string,
-  content?: string,
-  link?: string,
-  intro?: string,
+  imgUrl?: string;
+  heading?: string;
+  content?: string;
+  link?: string;
+  intro?: string;
 }
 
-export const ReadMoreCard = ({imgUrl, heading, content, link, intro}: ReadMoreCardProps) => {
-  return`
+export const ReadMoreCard = ({ imgUrl, heading, content, link, intro }: ReadMoreCardProps) => {
+  return `
    <read-more-card imgUrl="${imgUrl}" heading="${heading}" content="${content}" link="${link}" intro="${intro}"></read-more-card>
   `;
-}
+};

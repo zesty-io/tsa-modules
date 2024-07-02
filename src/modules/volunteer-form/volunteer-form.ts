@@ -1,4 +1,4 @@
-import './volunteer-form.css';
+import './volunteer-form.scss';
 
 export const VolunteerForm = () => {
   return `

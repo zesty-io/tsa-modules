@@ -1,4 +1,4 @@
-import './stats-number.css';
+import './stats-number.scss';
 import '../../components/button/button.css';
 
 const style = new CSSStyleSheet();
@@ -40,7 +40,7 @@ style.replaceSync(`
       margin-bottom: 40px;
     }
   }
-`)
+`);
 const template = document.createElement('template');
 
 export class StatsNumberModule extends HTMLElement {
@@ -50,9 +50,9 @@ export class StatsNumberModule extends HTMLElement {
   constructor() {
     super();
 
-    this.attachShadow({ mode : "open" })
-    this.heading = this.getAttribute("heading");
-    this.content = this.getAttribute("content");
+    this.attachShadow({ mode: 'open' });
+    this.heading = this.getAttribute('heading');
+    this.content = this.getAttribute('content');
 
     template.innerHTML = `
       <div class="stats-number__container">
@@ -63,11 +63,11 @@ export class StatsNumberModule extends HTMLElement {
           <p>${this.content}</p>
         </div>
       </div>
-    `
+    `;
   }
 
   connectedCallback() {
-    if(this.shadowRoot) {
+    if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [style];
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
@@ -75,11 +75,11 @@ export class StatsNumberModule extends HTMLElement {
 }
 
 export interface StatsNumberProps {
-  heading?: string,
-  content?: string,
+  heading?: string;
+  content?: string;
 }
 
-export const StatsNumber = ({heading, content}: StatsNumberProps) => {
+export const StatsNumber = ({ heading, content }: StatsNumberProps) => {
   return `
     <div class="stats-number">
       <h2>[FPO] STATS</h2>
@@ -101,5 +101,5 @@ export const StatsNumber = ({heading, content}: StatsNumberProps) => {
         <button class="btn btn--small btn--dark--outline">[FPO] Learn More</button>
       </div>
     </div>
-  `
-}
+  `;
+};
