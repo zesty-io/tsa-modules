@@ -1,9 +1,9 @@
-import './find-help.css';
+import './find-help.scss';
 
 export class FindHelpModule extends HTMLElement {
   private heading: string | null;
   private options: string | null;
-  
+
   constructor() {
     super();
     this.heading = this.getAttribute('heading');
@@ -104,16 +104,15 @@ export class FindHelpModule extends HTMLElement {
           </div>
       </lightbox-module>
     `;
-
   }
 }
 
 export interface FindHelpProps {
-  options?: string,
-  heading?: string,
+  options?: string;
+  heading?: string;
 }
 
-export const FindHelp = ({options, heading}: FindHelpProps) => {
+export const FindHelp = ({ options, heading }: FindHelpProps) => {
   return `
     <button id="open" type="button" class="btn btn--small btn--success--fill">Open</button>
     <tsa-find-help options='${options}' heading='${heading}'></tsa-find-help>

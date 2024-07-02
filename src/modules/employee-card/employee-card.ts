@@ -1,4 +1,4 @@
-import './employee-card.css';
+import './employee-card.scss';
 
 export const EmployeeCard = () => {
   return `

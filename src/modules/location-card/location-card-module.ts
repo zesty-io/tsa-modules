@@ -1,8 +1,8 @@
 // Todo Make dropdown for date and time
 
-import './location-card-module.css';
+import './location-card-module.scss';
 
-import './hours-modal.css';
+import './hours-modal.scss';
 
 export interface LocationCardProps {
   selected: boolean;

@@ -1,4 +1,4 @@
-import './event-single-header.css';
+import './event-single-header.scss';
 
 const eventSingleHeaderStyle = new CSSStyleSheet();
 
@@ -14,7 +14,6 @@ export class EventSingleHeaderModule extends HTMLElement {
 
     this.heading = this.getAttribute('heading');
     this.imageUrl = this.getAttribute('imageUrl');
-
   }
 
   connectedCallback() {
@@ -36,17 +35,17 @@ export class EventSingleHeaderModule extends HTMLElement {
             </div>
           </div>
         </div>
-      `
+      `;
   }
 }
 
 export interface EventSingleHeaderProps {
-  heading?: string,
-  imageUrl?: string,
+  heading?: string;
+  imageUrl?: string;
 }
 
-export const EventSingleHeader = ({heading, imageUrl}: EventSingleHeaderProps) => {
-  return`
+export const EventSingleHeader = ({ heading, imageUrl }: EventSingleHeaderProps) => {
+  return `
     <tsa-event-single-header heading="${heading}" imageUrl="${imageUrl}"></tsa-event-single-header>
-  `
-}
+  `;
+};
