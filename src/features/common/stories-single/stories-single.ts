@@ -130,7 +130,7 @@ export const TSAStoriesSingle = ({
 }: TSAStoriesSingleProps) => {
   return `
     <tsa-stories-single>
-      <h2 slot="heading">${heading}</h2>
+      <a href="/" slot="heading">${heading}</a>
       <div class="card__content" slot="content">${content}</div>
       <span class="card__date" data-date="${date}" slot="date"></span>
       <img slot="imageURL" src="${imageURL}" alt="sample image" />
