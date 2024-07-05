@@ -1,5 +1,3 @@
-import './more-ways-to-give.scss';
-
 const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
