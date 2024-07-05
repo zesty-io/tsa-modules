@@ -1,5 +1,3 @@
-import './header-location-module.scss';
-
 const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
@@ -90,8 +88,8 @@ export interface HeaderLocationProps {
 
 export const HeaderLocation = ({ title, subtitle }: HeaderLocationProps) => {
   return `<header-location-module title="${title}" subtitle="${subtitle}">
-    <ul class="header-location__list">
-        <li>
+    <ul class="d-flex align-items-center">
+        <li class="me-5" style="font-size: 1.6rem;">
         <tsa-dropdown title="About Us">
             <tsa-dropdown-item>Subpage</tsa-dropdown-item>
             <tsa-dropdown-item>Subpage</tsa-dropdown-item>
@@ -99,7 +97,7 @@ export const HeaderLocation = ({ title, subtitle }: HeaderLocationProps) => {
             <tsa-dropdown-item>Subpage</tsa-dropdown-item>
         </tsa-dropdown>
         </li>
-        <li>
+        <li class="me-5" style="font-size: 1.6rem;">
         <tsa-dropdown title="Our Services">
             <tsa-dropdown-item>Subpage</tsa-dropdown-item>
             <tsa-dropdown-item>Subpage</tsa-dropdown-item>
@@ -107,11 +105,11 @@ export const HeaderLocation = ({ title, subtitle }: HeaderLocationProps) => {
             <tsa-dropdown-item>Subpage</tsa-dropdown-item>
         </tsa-dropdown>
         </li>
-        <li>
-            <a href="/">Ways to Give</a>
+        <li class="me-5" style="font-size: 1.6rem;">
+            <a href="/" class="text-white text-decoration-none">Ways to Give</a>
         </li>
-        <li>
-            <a href="/">Contact Us</a>
+        <li class="me-0" style="font-size: 1.6rem;">
+            <a href="/" class="text-white text-decoration-none">Contact Us</a>
         </li>
     </ul>
   </header-location-module>`;
