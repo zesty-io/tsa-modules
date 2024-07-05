@@ -1,21 +1,4 @@
-.tsa-image-text-content {
-  text-align: center;
-
-  &>* {
-    margin-bottom: 2rem;
-  }
-
-  & :last-child {
-    margin-bottom: 0;
-  }
-}
-
 tsa-image-text-top-module {
   box-shadow: 0px 4px 10px 0px #00000033;
   display: block;
-}
-
-tsa-image-text-top-module .tsa-text {
-  text-align: center;
-  margin-top: 1rem;
 }

@@ -63,9 +63,9 @@ export class TSAImageTextRightModule extends HTMLElement {
 export const ImageTextRight = ({ image, alt }: ImageTextProps) => {
   return `
     <tsa-image-text-right-module image="${image}" alt="${alt}">
-        <div class="tsa-image-text-content">
-            <h1 class="tsa-title">Volunteer as a Bell Ringer</h1>
-            <p class="tsa-text">
+        <div class="tsa-image-text-content text-center text-xl-start">
+            <h1 class="tsa-title mb-4">Volunteer as a Bell Ringer</h1>
+            <p class="tsa-text mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
             </p>
             <button class="btn btn--small btn--dark--fill">Register to Ring</button>

@@ -57,9 +57,9 @@ export class TSAImageTextTopModule extends HTMLElement {
 export const ImageTextTop = ({ image, alt }: ImageTextProps) => {
   return `
     <tsa-image-text-top-module  image="${image}" alt="${alt}">
-        <div class="tsa-image-text-content">
-            <span class="tsa-title text-center">Volunteer as a Bell Ringer</span>
-            <p class="tsa-text">
+        <div class="tsa-image-text-content text-center">
+            <h1 class="tsa-title text-center mb-4">Volunteer as a Bell Ringer</h1>
+            <p class="tsa-text mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.
             </p>
             <button class="btn btn--fullWidth btn--dark--outline btn--small">View Website</button>
