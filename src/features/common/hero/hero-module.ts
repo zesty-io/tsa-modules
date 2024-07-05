@@ -147,13 +147,13 @@ export interface HeroProps {
 export const Hero = ({ title, subtitle, imageUrl }: HeroProps) => {
   return `
   <hero-module title="${title}" imageUrl="${imageUrl}" subtitle="${subtitle}">
-    <div slot="cta" class="cta">
-        <div class="cta__primary">  
+    <div slot="cta" class="mt-4" style="width: 30rem; z-index: 40;">
+        <div class="mb-4">  
             <button type="button" class="btn btn--small btn--dark--fill btn--fullWidth">Primary CTA</button>
         </div>
-        <div class="cta__secondary">
-            <button type="button" class="btn btn--small btn--dark--outline">CTA</button>
-            <button type="button" class="btn btn--small btn--dark--outline">CTA</button>
+        <div class="d-flex align-items-center justify-content-between">
+            <button type="button" class="btn btn--small btn--dark--outline me-4 flex-fill">CTA</button>
+            <button type="button" class="btn btn--small btn--dark--outline flex-fill">CTA</button>
         </div>
     </div>
   </hero-module>`;
