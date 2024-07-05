@@ -93,17 +93,17 @@ export class MoreWayToGiveAccordionModule extends HTMLElement {
 
 export const MoreWaysToGive = () => {
   return `<tsa-more-ways-to-give-accordion data-title="Give Time">
-            <div id="more-ways">
+            <div class="d-flex align-items-start flex-column border" style="border-color: #999999; padding: 3.2rem 1.6rem;">
               <tsa-text-with-icon bootstrapIcon="image" title="Volunteer"></tsa-text-with-icon>
               <p class="tsa-text">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</p>
               <button type="button" class="btn btn--small btn--dark--outline">Volunteer</button>
             </div>
-            <div id="more-ways">
+            <div class="d-flex align-items-start flex-column border" style="border-color: #999999; padding: 3.2rem 1.6rem;">
               <tsa-text-with-icon bootstrapIcon="image" title="Volunteer"></tsa-text-with-icon>
               <p class="tsa-text">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</p>
               <button type="button" class="btn btn--small btn--dark--outline">Volunteer</button>
             </div>
-            <div id="more-ways">
+            <div class="d-flex align-items-start flex-column border" style="border-color: #999999; padding: 3.2rem 1.6rem;">
               <tsa-text-with-icon bootstrapIcon="image" title="Volunteer"></tsa-text-with-icon>
               <p class="tsa-text">Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua. Ut</p>
               <button type="button" class="btn btn--small btn--dark--outline">Volunteer</button>
