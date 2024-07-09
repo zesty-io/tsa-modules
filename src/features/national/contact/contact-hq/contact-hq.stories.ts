@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import { MoreWaysToGive } from "./more-ways-to-give";
+import { ContactHQ } from "./contact-hq";
 
 const meta = {
-	title: "Features/National/Ways to give/More Ways To Give",
-	render: () => MoreWaysToGive(),
+	title: "Features/National/Contact/Contact HQ",
+	render: () => ContactHQ(),
 	tags: ["autodocs"],
 } satisfies Meta;
 
