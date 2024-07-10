@@ -1,7 +1,7 @@
 export class ContactHQModule extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-        <div class="p-6">
+        <div class="p-6 bg-gray-lighter">
             <h1 class="tsa-title mb-8">The Salvation Army HQ</h1>
             <div class="d-flex flex-column gap-2 mx-10 d-lg-none">
                 <div>
