@@ -65,6 +65,10 @@ import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
 import { ContactUsModule } from "../src/features/national/contact/contact-us/contact-us";
 
+// Corporate Partnership
+import { PartnershipOpportunitiesHeaderModule } from "../src/features/national/corporate-sponsorships/partnership-opportunities/partnership";
+import { PartnershipOpportunitiesCardModule } from "../src/features/national/corporate-sponsorships/corporate-sponsorship-card/partnership-card";
+
 customElements.define("hero-module", HeroModule);
 customElements.define("local-need-module", LocalNeedModule);
 customElements.define("local-needs-module", LocalNeedsModule);
@@ -118,6 +122,13 @@ customElements.define("map-header-module", MapHeaderModule);
 // Contact
 customElements.define("tsa-contact-hq", ContactHQModule);
 customElements.define("tsa-contact-us", ContactUsModule);
+
+// Corporate Partnership
+customElements.define("tsa-partnership", PartnershipOpportunitiesHeaderModule);
+customElements.define(
+	"tsa-partnership-card",
+	PartnershipOpportunitiesCardModule,
+);
 
 // register();
 

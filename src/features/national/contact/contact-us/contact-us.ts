@@ -13,7 +13,6 @@ export class ContactUsModule extends HTMLElement {
                 </div>
 
                 <form class="gap-6 row">
-
                     <label class="input">
                         <span>I am contacting you because: *</span>
                         <input class="input--medium" name="" value="" placeholder="I want to donate items/schedule a pick up" type="text" false/>

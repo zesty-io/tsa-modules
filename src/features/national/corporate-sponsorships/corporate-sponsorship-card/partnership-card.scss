@@ -1,0 +1,28 @@
+.partnership-card-container {
+  width: 430px;
+  height: 200px;
+  & .partnership-card-image {
+    position: absolute;
+    z-index: -10;
+  }
+
+  & .partnership-card-content {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-base-light);
+
+    & h1 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    & p {
+      line-height: 28px;
+      font-size: 16px;
+    }
+  }
+}
