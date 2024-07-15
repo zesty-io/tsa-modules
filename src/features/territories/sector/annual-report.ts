@@ -3,7 +3,7 @@ import "./annual-reports.scss";
 export class AnnualReportModule extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-            <div>
+            <div class="p-10">
                 <div class="mb-8">
                     <h1 class="tsa-title mb-6">${this.getAttribute("data-title")}</h1>
                     <p class="tsa-text text-center">${this.getAttribute("data-desc")}</p>
