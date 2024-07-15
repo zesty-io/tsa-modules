@@ -69,6 +69,11 @@ import { ContactUsModule } from "../src/features/national/contact/contact-us/con
 import { PartnershipOpportunitiesHeaderModule } from "../src/features/national/corporate-sponsorships/partnership-opportunities/partnership";
 import { PartnershipOpportunitiesCardModule } from "../src/features/national/corporate-sponsorships/corporate-sponsorship-card/partnership-card";
 
+// *** Territories / Division ***
+
+// Sector Template
+import { AnnualReportModule } from "../src/features/territories/sector/annual-report";
+
 customElements.define("hero-module", HeroModule);
 customElements.define("local-need-module", LocalNeedModule);
 customElements.define("local-needs-module", LocalNeedsModule);
@@ -129,6 +134,11 @@ customElements.define(
 	"tsa-partnership-card",
 	PartnershipOpportunitiesCardModule,
 );
+
+// *** Territories / Divisions
+
+// Sector Template
+customElements.define("tsa-annual-reports", AnnualReportModule);
 
 // register();
 
