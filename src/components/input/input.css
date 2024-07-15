@@ -1,6 +1,7 @@
 .input {
     display: flex;
     flex-direction: column;
+    text-align: start;
 
     & input {
         border-radius: .6rem;

@@ -62,10 +62,8 @@ import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-
 
 // *** National ***
 // Contacts
-import {
-	ContactHQ,
-	ContactHQModule,
-} from "../src/features/national/contact/contact-hq/contact-hq";
+import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
+import { ContactUsModule } from "../src/features/national/contact/contact-us/contact-us";
 
 customElements.define("hero-module", HeroModule);
 customElements.define("local-need-module", LocalNeedModule);
@@ -119,6 +117,7 @@ customElements.define("map-header-module", MapHeaderModule);
 // *** National ***
 // Contact
 customElements.define("tsa-contact-hq", ContactHQModule);
+customElements.define("tsa-contact-us", ContactUsModule);
 
 // register();
 
