@@ -73,6 +73,7 @@ import { PartnershipOpportunitiesCardModule } from "../src/features/national/cor
 
 // Sector Template
 import { AnnualReportModule } from "../src/features/territories/sector/annual-reports/annual-report";
+import { ServiceCardModule } from "../src/features/territories/sector/service-card/service-card";
 
 customElements.define("hero-module", HeroModule);
 customElements.define("local-need-module", LocalNeedModule);
@@ -139,7 +140,7 @@ customElements.define(
 
 // Sector Template
 customElements.define("tsa-annual-reports", AnnualReportModule);
-
+customElements.define("tsa-service-card", ServiceCardModule);
 // register();
 
 const preview: Preview = {
