@@ -1,5 +1,3 @@
-import "./annual-reports.scss";
-
 export class AnnualReportModule extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `

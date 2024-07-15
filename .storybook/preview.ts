@@ -72,7 +72,7 @@ import { PartnershipOpportunitiesCardModule } from "../src/features/national/cor
 // *** Territories / Division ***
 
 // Sector Template
-import { AnnualReportModule } from "../src/features/territories/sector/annual-report";
+import { AnnualReportModule } from "../src/features/territories/sector/annual-reports/annual-report";
 
 customElements.define("hero-module", HeroModule);
 customElements.define("local-need-module", LocalNeedModule);
