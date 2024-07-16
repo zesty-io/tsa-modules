@@ -1,9 +1,11 @@
+import "./service-card.scss";
+
 export class ServiceCardModule extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-        <div class="shadow pb-8">
-            <div class="mb-6">
-                <img src="${this.getAttribute("data-image-src")}" alt="${this.getAttribute("data-image-alt")}"/>
+        <div class="service-card shadow pb-8">
+            <div class="mb-6 w-100">
+                <img class="w-100" src="${this.getAttribute("data-image-src")}" alt="${this.getAttribute("data-image-alt")}"/>
             </div>
             <div class="d-flex align-items-center justify-content-center flex-column gap-6">
                 <h1 class="fw-semibold fs-2">${this.getAttribute("data-title")}</h1>
