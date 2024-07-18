@@ -75,6 +75,9 @@ import { PartnershipOpportunitiesCardModule } from "../src/features/national/cor
 import { AnnualReportModule } from "../src/features/territories/sector/annual-reports/annual-report";
 import { ServiceCardModule } from "../src/features/territories/sector/service-card/service-card";
 
+// Our Team
+import { TeamCardModule } from "../src/features/territories/our-team/team-card/team-card";
+
 customElements.define("hero-module", HeroModule);
 customElements.define("local-need-module", LocalNeedModule);
 customElements.define("local-needs-module", LocalNeedsModule);
@@ -141,6 +144,9 @@ customElements.define(
 // Sector Template
 customElements.define("tsa-annual-reports", AnnualReportModule);
 customElements.define("tsa-service-card", ServiceCardModule);
+
+// Our Team
+customElements.define("tsa-team-card", TeamCardModule);
 // register();
 
 const preview: Preview = {
