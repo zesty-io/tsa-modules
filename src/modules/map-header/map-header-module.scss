@@ -1,0 +1,38 @@
+.map-header-module {
+
+    padding: 2rem 1rem 1rem 1rem;
+    background-color: var(--color-base-light);
+}
+
+.map-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-header-container :first-child {
+    margin-bottom: 1rem;
+}
+
+.map-header-container :last-child {
+    margin-bottom: 3rem;
+}
+
+.map-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-search-container :first-child {
+    flex: 1;
+    margin-right: .5rem;
+}
+
+@media (min-width: 1280px) {
+
+    .map-search-container {
+        display: none;
+    }
+}
