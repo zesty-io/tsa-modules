@@ -1,0 +1,43 @@
+.volunteer-jobs-container {
+    padding: 3rem 1rem;
+}
+
+.volunteer-jobs-container h1 {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.volunteer-jobs-inputs>* {
+    margin-bottom: 3rem;
+}
+
+.volunteer-jobs-cards>* {
+    margin-bottom: 3rem;
+}
+
+.volunteer-job-card>* {
+    margin-bottom: 1rem;
+}
+
+.volunteer-job-card :last-child {
+    margin-bottom: 0;
+}
+
+.volunteer-job-card h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.volunteer-job-card span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.volunteer-job-card p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}

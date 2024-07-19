@@ -1,0 +1,26 @@
+#content {
+    display: grid;
+    row-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+#cta {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+@media (min-width: 840px) {
+    #content {
+        grid-template-columns: auto auto;
+        column-gap: 2.6rem;
+    }
+}
+
+
+
+@media (min-width: 1280px) {
+    #content {
+        grid-template-columns: auto auto auto;
+    }
+}
