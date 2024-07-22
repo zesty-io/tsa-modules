@@ -17,28 +17,40 @@ styles.replaceSync(`
     }
     
     svg{
-        margin-right: 1rem;
+        margin-right: .5rem;
         transform: scale(1.1);
     }
     
     .header-location__title{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         padding-top: .2rem;
         margin-right: auto;
     
         & .title{
-            font-size: 1.6rem;
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: .5rem;
+            text-align: left;
+        }
+
+        & .divider{
+            background-color: #FFF;
+            height: .8rem;
+            width: 1px;
+            margin: 0 1rem;
         }
     
         & .subtitle{
-            font-size: 1.3rem;
+            font-size: .8rem;
             font-weight: 400;
             color: #FFF;
             text-decoration: none;
+        }
+
+        & .subtitle-container{
+            display:flex
         }
     }
     
@@ -49,15 +61,15 @@ styles.replaceSync(`
 `);
 
 export class HeaderLocationModule extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-  }
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
 
-  connectedCallback() {
-    if (this.shadowRoot) {
-      this.shadowRoot.adoptedStyleSheets = [styles];
-      this.shadowRoot.innerHTML = `
+	connectedCallback() {
+		if (this.shadowRoot) {
+			this.shadowRoot.adoptedStyleSheets = [styles];
+			this.shadowRoot.innerHTML = `
 
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_5734_6188" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -69,46 +81,61 @@ export class HeaderLocationModule extends HTMLElement {
         </svg>
 
         <div class="header-location__title">        
-            <span class="title">${this.getAttribute('title')}</span>
-            <a class="subtitle" href="/">${this.getAttribute('subtitle')}</a>
+            <span class="title">${this.getAttribute("data-title")}</span>
+            <div class="subtitle-container">
+                <span class="subtitle">Find my Local Salvation Army</span>
+                <div class="divider"></div>
+                <a class="subtitle" href="/">${this.getAttribute("data-location")}</a>
+            </div>
         </div>
 
         <div class="header-location__menu">
             <slot></slot>
         </div>
       `;
-    }
-  }
+		}
+	}
 }
 
 export interface HeaderLocationProps {
-  title: String;
-  subtitle: String;
+	title: string;
+	location: string;
 }
 
-export const HeaderLocation = ({ title, subtitle }: HeaderLocationProps) => {
-  return `<header-location-module title="${title}" subtitle="${subtitle}">
+export const HeaderLocation = ({ title, location }: HeaderLocationProps) => {
+	return `<header-location-module data-title="${title}" data-location="${location}">
     <ul class="d-flex align-items-center">
-        <li class="me-5" style="font-size: 1.6rem;">
-        <tsa-dropdown title="About Us">
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-        </tsa-dropdown>
+         <li class="nav-item dropdown me-8">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
-        <li class="me-5" style="font-size: 1.6rem;">
-        <tsa-dropdown title="Our Services">
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-            <tsa-dropdown-item>Subpage</tsa-dropdown-item>
-        </tsa-dropdown>
+         <li class="nav-item dropdown me-8">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
-        <li class="me-5" style="font-size: 1.6rem;">
-            <a href="/" class="text-white text-decoration-none">Ways to Give</a>
+         <li class="nav-item dropdown me-8">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ways to Give
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
-        <li class="me-0" style="font-size: 1.6rem;">
+        <li class="me-0">
             <a href="/" class="text-white text-decoration-none">Contact Us</a>
         </li>
     </ul>

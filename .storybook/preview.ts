@@ -5,9 +5,8 @@ import {
 } from "@storybook/addon-viewport";
 import { withConsole } from "@storybook/addon-console";
 
-// import '../bootstrap/bootstrap.bundle.js';
+import "../bootstrap/bootstrap.bundle";
 import "../src/styles/scss/bootstrap.scss";
-
 import "../src/styles/variables.css";
 import "../src/styles/index.css";
 
@@ -37,7 +36,6 @@ import { StatsNumberModule } from "../src/modules/stats-number/stats-number";
 import { SelectModule } from "../src/components/select/select";
 import { TSAServicesModule } from "../src/modules/services-list/services-list";
 import { TSAStoriesSingleModule } from "../src/features/common/stories-single/stories-single";
-import { DropdownComponent } from "../src/components/dropdown/dropdown";
 import { DropdownItemComponent } from "../src/components/dropdown/dropdown-item";
 import { AccordionItemComponent } from "../src/components/accordion-item/accordion-item";
 import { PaginatedListModule } from "../src/features/common/paginated-list/paginated-list";
@@ -96,7 +94,6 @@ customElements.define("stats-number", StatsNumberModule);
 customElements.define("tsa-select", SelectModule);
 customElements.define("tsa-services", TSAServicesModule);
 customElements.define("tsa-stories-single", TSAStoriesSingleModule);
-customElements.define("tsa-dropdown", DropdownComponent);
 customElements.define("tsa-dropdown-item", DropdownItemComponent);
 customElements.define("service-item", TSAServiceItemModule);
 customElements.define("accordion-item", AccordionItemComponent);

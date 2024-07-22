@@ -1,13 +1,13 @@
-import { Meta, StoryObj } from '@storybook/html';
-import { DropdownProps, Dropdown } from './dropdown';
+import type { Meta, StoryObj } from "@storybook/html";
+import { type DropdownProps, Dropdown } from "./dropdown";
 
 const meta = {
-  title: 'Components/Dropdown',
-  parameters: {
-    layout: 'centered'
-  },
-  tags: ['autodocs'],
-  render: (args) => Dropdown(args)
+	title: "Components/Dropdown",
+	parameters: {
+		layout: "centered",
+	},
+	tags: ["autodocs"],
+	render: (args) => Dropdown(args),
 } satisfies Meta<DropdownProps>;
 
 export default meta;
@@ -15,7 +15,7 @@ export default meta;
 type Story = StoryObj<DropdownProps>;
 
 export const Example: Story = {
-  args: {
-    title: 'Dropdown'
-  }
+	args: {
+		title: "Dropdown",
+	},
 };
