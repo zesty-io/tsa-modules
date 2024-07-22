@@ -39,7 +39,7 @@ styles.replaceSync(`
             background-color: #FFF;
             height: .8rem;
             width: 1px;
-            margin: 0 1rem;
+            margin: 0 .5rem;
         }
     
         & .subtitle{
