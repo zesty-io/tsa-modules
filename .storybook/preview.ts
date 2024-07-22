@@ -58,6 +58,9 @@ import { FindHelpModule } from "../src/modules/find-help-modal/find-help-modal";
 import { MainWaysToGiveModule } from "../src/features/ways-to-give/main-ways-to-give/main-ways-to-give";
 import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-ways-to-give/more-ways-to-give";
 
+// *** Common ***
+import { HeaderLocationIndicatorModule } from "../src/features/common/header-location-indicator/header-location-indicator";
+
 // *** National ***
 // Contacts
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -123,6 +126,12 @@ customElements.define("tsa-read-more-card-list", ReadMoreCardListModule);
 customElements.define("tsa-find-help", FindHelpModule);
 
 customElements.define("map-header-module", MapHeaderModule);
+
+// *** Common ***
+customElements.define(
+	"tsa-header-location-indicator",
+	HeaderLocationIndicatorModule,
+);
 
 // *** National ***
 // Contact

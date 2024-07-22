@@ -6,6 +6,9 @@ import {
 
 const meta = {
 	title: "Features/Common/Site Navigation",
+	parameters: {
+		layout: ["centered"],
+	},
 	tags: ["autodocs"],
 	render: (args) => HeaderLocation(args),
 } satisfies Meta<HeaderLocationProps>;
