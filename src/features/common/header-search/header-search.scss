@@ -1,0 +1,17 @@
+.tsa-header-search {
+  position: relative;
+
+  & i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 23px;
+  }
+
+  & input {
+    padding-left: 4rem;
+    font-size: 16px;
+    padding: 0.6rem 3rem;
+  }
+}

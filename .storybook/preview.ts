@@ -60,7 +60,7 @@ import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-
 
 // *** Common ***
 import { HeaderLocationIndicatorModule } from "../src/features/common/header-location-indicator/header-location-indicator";
-
+import { HeaderSearchModule } from "../src/features/common/header-search/header-search";
 // *** National ***
 // Contacts
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -132,6 +132,7 @@ customElements.define(
 	"tsa-header-location-indicator",
 	HeaderLocationIndicatorModule,
 );
+customElements.define("tsa-header-search", HeaderSearchModule);
 
 // *** National ***
 // Contact
