@@ -5,7 +5,7 @@ import {
 } from "./header-location-module";
 
 const meta = {
-	title: "Features/Common/Header Location",
+	title: "Features/Common/Site Navigation",
 	tags: ["autodocs"],
 	render: (args) => HeaderLocation(args),
 } satisfies Meta<HeaderLocationProps>;
