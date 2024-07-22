@@ -61,6 +61,8 @@ import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-
 // *** Common ***
 import { HeaderLocationIndicatorModule } from "../src/features/common/header-location-indicator/header-location-indicator";
 import { HeaderSearchModule } from "../src/features/common/header-search/header-search";
+import { FindCTAModule } from "../src/features/common/find-cta-flow/find-cta-flow";
+
 // *** National ***
 // Contacts
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -133,6 +135,7 @@ customElements.define(
 	HeaderLocationIndicatorModule,
 );
 customElements.define("tsa-header-search", HeaderSearchModule);
+customElements.define("tsa-find-cta", FindCTAModule);
 
 // *** National ***
 // Contact
