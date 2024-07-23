@@ -1,7 +1,7 @@
 .tsa-switch {
     border: 1px solid #000;
     border-radius: 30rem;
-    width: 5.5rem;
+    width: 5.6rem;
     height: 3rem;
     position: relative;
     cursor: pointer;
@@ -54,7 +54,7 @@
 }
 
 .tsa-switch[toggled] .tsa-switch__thumb {
-    left: 2.6rem;
+    left: 2.7rem;
 }
 
 .tsa-switch[toggled] .tsa-switch__label {
