@@ -1,5 +1,4 @@
-
-const template = document.createElement('template');
+const template = document.createElement("template");
 
 const style = new CSSStyleSheet();
 
@@ -15,7 +14,7 @@ style.replaceSync(`
   width: 100%;
   box-sizing: border-box;
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 .dropdown-menu {
@@ -107,7 +106,7 @@ style.replaceSync(`
   cursor: pointer;
   color: var(--color-base-light);
   transition: all .3s ease-out;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 .btn:disabled {
@@ -253,22 +252,15 @@ style.replaceSync(`
 /* **** Sizes **** */
 
 .btn--small {
-  padding: 1.2rem 1.4rem;
+    padding: .5rem 1.2rem;
 }
 
-.btn--medium {
-  padding: 1.6rem 1.8rem;
-}
-
-.btn--large {
-  padding: 2rem 2.2rem;
-}
 
 .btn--fillWidth {
   width: 100%;
 }
 .cta-btn .btn {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 28px;
   text-align: center;
@@ -281,49 +273,51 @@ input[type='checkbox']::checked {
   color: #fff;
 }
 .input--large {
-  padding: 1.4rem 1.6rem;
+  padding: .5rem 1.2rem;
 }
 .dropdown .dropdown__label {
   margin-bottom: .8rem;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 16px;
   display: block;
 }
 
 @media (max-width: 769px) {
   .dropdown label {
-    font-size: 1.2rem;
+    font-size: 12px;
   }
 }
-`)
+`);
 
 export class SelectModule extends HTMLElement {
-  private selectItems: { label: string; value: string }[];
-  private label: string | null;
-  private placeholder: string | null;
+	private selectItems: { label: string; value: string }[];
+	private label: string | null;
+	private placeholder: string | null;
 
-  constructor() {
-    super();
+	constructor() {
+		super();
 
-    this.attachShadow({ mode : "open" });
+		this.attachShadow({ mode: "open" });
 
-    const optionsAttr  = this.getAttribute('options');
-    const optionsItems: { label: string; value: string }[] = optionsAttr ? JSON.parse(optionsAttr) : [];
-    this.selectItems = optionsItems;
-    this.label = this.getAttribute('label');
-    this.placeholder = this.getAttribute('placeholder');
+		const optionsAttr = this.getAttribute("options");
+		const optionsItems: { label: string; value: string }[] = optionsAttr
+			? JSON.parse(optionsAttr)
+			: [];
+		this.selectItems = optionsItems;
+		this.label = this.getAttribute("label");
+		this.placeholder = this.getAttribute("placeholder");
 
-    let optionsHTML = '';
-    optionsItems.map((option) => {
-      optionsHTML += `
+		let optionsHTML = "";
+		optionsItems.map((option) => {
+			optionsHTML += `
             <div class="dropdown-item">
               <input type="checkbox" id="option1" value="${option.value}">
               <label for="option1">${option.label}</label>
             </div>
       `;
-    });
+		});
 
-    template.innerHTML = `
+		template.innerHTML = `
       <div id="dropdown" class="dropdown">
         <label for="dropdown-input" class="dropdown__label">${this.label}</label>
         <input class="input--large" type="text" id="dropdown-input" placeholder="${this.placeholder}" readonly>
@@ -345,89 +339,94 @@ export class SelectModule extends HTMLElement {
         </div>
       </div>
       `;
+	}
 
-  }
+	connectedCallback() {
+		if (this.shadowRoot) {
+			this.shadowRoot.adoptedStyleSheets = [style];
+			this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-  connectedCallback() {
-    if(this.shadowRoot) {
-      this.shadowRoot.adoptedStyleSheets = [style];
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
+			// Get references to the required elements
+			const dropdownInput = this.shadowRoot.querySelector("#dropdown-input");
+			const clearBtn = this.shadowRoot.querySelector("#clear-btn");
+			const applyBtn = this.shadowRoot.querySelector("#apply-btn");
+			const cancelBtn = this.shadowRoot.querySelector("#cancel-btn");
 
-      // Get references to the required elements
-      const dropdownInput = this.shadowRoot.querySelector('#dropdown-input');
-      const clearBtn = this.shadowRoot.querySelector('#clear-btn');
-      const applyBtn = this.shadowRoot.querySelector('#apply-btn');
-      const cancelBtn = this.shadowRoot.querySelector('#cancel-btn');
+			// Add event listeners
+			dropdownInput?.addEventListener("click", this.toggleDropdown.bind(this));
+			clearBtn?.addEventListener("click", this.clearSelectors.bind(this));
+			applyBtn?.addEventListener("click", this.applySelectors.bind(this));
+			cancelBtn?.addEventListener("click", this.toggleDropdown.bind(this));
+			window.addEventListener("click", this.handleOutsideClick.bind(this));
+		}
+	}
 
-      // Add event listeners
-      dropdownInput?.addEventListener('click', this.toggleDropdown.bind(this));
-      clearBtn?.addEventListener('click', this.clearSelectors.bind(this));
-      applyBtn?.addEventListener('click', this.applySelectors.bind(this));
-      cancelBtn?.addEventListener('click', this.toggleDropdown.bind(this));
-      window.addEventListener('click', this.handleOutsideClick.bind(this));
-    }
-  }
+	toggleDropdown(event?: MouseEvent | Event) {
+		const dropdownMenu = this.shadowRoot?.querySelector("#dropdown-menu");
+		if (dropdownMenu) {
+			if ((dropdownMenu as HTMLElement).style.display === "none") {
+				(dropdownMenu as HTMLElement).style.display = "block";
+			} else {
+				(dropdownMenu as HTMLElement).style.display = "none";
+			}
+		}
 
-  toggleDropdown(event?: MouseEvent | Event) {
-    const dropdownMenu = this.shadowRoot?.querySelector('#dropdown-menu');
-    if (dropdownMenu) {
-      if ((dropdownMenu as HTMLElement).style.display === 'none') {
-        (dropdownMenu as HTMLElement).style.display = 'block';
-      } else {
-        (dropdownMenu as HTMLElement).style.display = 'none';
-      }
-    }
-  
-    if (event) {
-      event.stopPropagation();
-    }
-  }
+		if (event) {
+			event.stopPropagation();
+		}
+	}
 
-  clearSelectors() {
-    const checkboxes = this.shadowRoot?.querySelectorAll('input[type="checkbox"]');
-    if (checkboxes) {
-      checkboxes.forEach((checkbox) => {
-        (checkbox as HTMLInputElement).checked = false;
-      });
-    }
-  }
+	clearSelectors() {
+		const checkboxes = this.shadowRoot?.querySelectorAll(
+			'input[type="checkbox"]',
+		);
+		if (checkboxes) {
+			// biome-ignore lint/complexity/noForEach: <explanation>
+			checkboxes.forEach((checkbox) => {
+				(checkbox as HTMLInputElement).checked = false;
+			});
+		}
+	}
 
-  applySelectors() {
-    const dropdownInput = this.shadowRoot?.querySelector('#dropdown-input');
-    const selectedOptions = Array.from(this.shadowRoot?.querySelectorAll('input[type="checkbox"]:checked') || [])
-      .map((checkbox) => checkbox.nextElementSibling?.textContent);
-  
-    if (dropdownInput) {
-      (dropdownInput as HTMLInputElement).value = selectedOptions.join(', ');
-    }
-  
-    this.toggleDropdown();
-  }
+	applySelectors() {
+		const dropdownInput = this.shadowRoot?.querySelector("#dropdown-input");
+		const selectedOptions = Array.from(
+			this.shadowRoot?.querySelectorAll('input[type="checkbox"]:checked') || [],
+		).map((checkbox) => checkbox.nextElementSibling?.textContent);
 
-  handleOutsideClick(event: MouseEvent | null) {
-    const dropdownInput = this.shadowRoot?.querySelector('#dropdown-input');
-    const dropdownMenu = this.shadowRoot?.querySelector('#dropdown-menu');
-  
-    if (dropdownMenu && dropdownMenu.contains(event?.target as Node) && event?.target !== dropdownInput) {
-      (dropdownMenu as HTMLElement).style.display = 'none';
-    }
-  }
-  
+		if (dropdownInput) {
+			(dropdownInput as HTMLInputElement).value = selectedOptions.join(", ");
+		}
+
+		this.toggleDropdown();
+	}
+
+	handleOutsideClick(event: MouseEvent | null) {
+		const dropdownInput = this.shadowRoot?.querySelector("#dropdown-input");
+		const dropdownMenu = this.shadowRoot?.querySelector("#dropdown-menu");
+
+		if (
+			dropdownMenu?.contains(event?.target as Node) &&
+			event?.target !== dropdownInput
+		) {
+			(dropdownMenu as HTMLElement).style.display = "none";
+		}
+	}
 }
 
 export interface Option {
-  label?: string;
-  value?: string;
+	label?: string;
+	value?: string;
 }
 
 export interface SelectProps {
-  options?: string;
-  label?: string;
-  placeholder?: string;
+	options?: string;
+	label?: string;
+	placeholder?: string;
 }
 
 export const Select = ({ options, label, placeholder }: SelectProps) => {
-  return `
+	return `
     <tsa-select options='${options}' label='${label}' placeholder='${placeholder}'></tsa-select>
-  `
-}
+  `;
+};
