@@ -311,17 +311,46 @@ $light: $gray-100 !default;
 $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
 
+// TSA colors
+$tsa-primary: #ed1c2b !default;
+$tsa-primary-light: #f14955 !default;
+$tsa-primary-lighter: #f47780 !default;
+$tsa-blue: #28abe2 !default;
+$tsa-blue-dark: #2a313f !default;
+$tsa-blue-light: #555a65 !default;
+$tsa-secondary-lighter: #dfedf0 !default;
+$tsa-success: #28a745 !default;
+$tsa-danger: #dc3545 !default;
+$tsa-warning: #ffc107 !default;
+$tsa-info: #17a2b8 !default;
+$tsa-green: #22b573 !default;
+$tsa-gray: #5a5d5d !default;
+$tsa-dark-gray: #313435 !default;
+$tsa-gray-medium: #999999 !default;
+$tsa-gray-light: #afb7bb !default;
+$tsa-gray-lighter: #eff1f0 !default;
+
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  'primary': $primary,
-  'secondary': $secondary,
-  'success': $success,
-  'info': $info,
-  'warning': $warning,
-  'danger': $danger,
-  'light': $light,
-  'dark': $dark,
-  'gray-lighter': $gray-lighter
+  'primary': $tsa-primary,
+  'primary-light': $tsa-primary-light,
+  'primary-lighter': $tsa-primary-lighter,
+  'blue': $tsa-blue,
+  'blue-dark': $tsa-blue-dark,
+  'blue-light': $tsa-blue-light,
+  'secondary-lighter': $tsa-secondary-lighter,
+  'success': $tsa-success,
+  'danger': $tsa-danger,
+  'warning': $tsa-warning,
+  'info': $tsa-info,
+  'green': $tsa-green,
+  'gray': $tsa-gray,
+  'dark-gray': $tsa-dark-gray,
+  'gray-medium': $tsa-gray-medium,
+  'gray-light': $tsa-gray-light,
+  'gray-lighter': $tsa-gray-lighter,
+  'dark': #000,
+  'light': #fff
 ) !default;
 // scss-docs-end theme-colors-map
 
