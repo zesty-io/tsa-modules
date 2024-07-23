@@ -1,15 +1,27 @@
-import "./button.css";
+type colors =
+	| "primary"
+	| "primary-light"
+	| "primary-lighter"
+	| "blue"
+	| "blue-light"
+	| "blue-dark"
+	| "success"
+	| "danger"
+	| "info"
+	| "warning"
+	| "green"
+	| "gray"
+	| "gray-dark"
+	| "gray-medium"
+	| "gray-light"
+	| "gray-lighter"
+	| "dark"
+	| "light"
+	| "secondary-lighter";
 
 export interface ButtonProps {
-	color?:
-		| "primary"
-		| "success"
-		| "danger"
-		| "info"
-		| "warning"
-		| "dark"
-		| "light"
-		| "secondary";
+	color?: colors;
+	textColor: colors;
 	outline?: boolean;
 	size?: "sm" | "lg";
 	block?: boolean;
@@ -20,6 +32,7 @@ export interface ButtonProps {
 
 export const Button = ({
 	color = "primary",
+	textColor = "light",
 	outline,
 	size = "sm",
 	block = false,
@@ -39,6 +52,7 @@ export const Button = ({
 		`btn-${size}`,
 		`btn-${block ? "block" : ""}`,
 		`btn${outline ? "-outline" : ""}-${color}`,
+		`text-${textColor}`,
 	].join(" ");
 
 	btn.disabled = disabled;
