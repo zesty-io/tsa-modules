@@ -60,7 +60,7 @@ const meta = {
 				"secondary-lighter",
 			],
 			type: "string",
-			defaultValue: { summary: "primary" },
+			defaultValue: { summary: "light" },
 		},
 		outline: {
 			control: { type: "boolean" },
