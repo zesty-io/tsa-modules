@@ -11,7 +11,7 @@ export class FindCTAModule extends HTMLElement {
     <h5 class="offcanvas-title tsa-title">Find Help Near You</h5>
   </div>
   <div class="offcanvas-body">
-    <div class="d-flex flex-column gap-5">
+    <form class="d-flex flex-column gap-5 h-100">
         <tsa-select options='[{"label":"[FPO] Homeless Shelter 1","value":"1"},{"label":"[FPO] Homeless Shelter 2","value":"2"}]' label='What service are you looking for?' placeholder='Select services'></tsa-select>
         <label class="input">
             <span>City or zip code</span>
@@ -22,8 +22,11 @@ export class FindCTAModule extends HTMLElement {
           <i class="bi bi-crosshair"></i>
           <a  href="#"class="me-3 text-black text-decoration-none">Use my location</a>
         </div>
-    </div>
 
+        <div class="d-grid mt-auto">
+          <button type="button" class="btn btn-dark">Find Help</button>
+        </div>
+    </form>
   </div>
 </div>
         `;
