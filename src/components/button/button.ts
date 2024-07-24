@@ -32,7 +32,7 @@ export interface ButtonProps {
 
 export const Button = ({
 	color = "primary",
-	textColor = "light",
+	// textColor = "light",
 	outline,
 	size = "sm",
 	block = false,
@@ -52,7 +52,6 @@ export const Button = ({
 		`btn-${size}`,
 		`btn-${block ? "block" : ""}`,
 		`btn${outline ? "-outline" : ""}-${color}`,
-		`text-${textColor}`,
 	].join(" ");
 
 	btn.disabled = disabled;
