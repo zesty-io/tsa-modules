@@ -9,8 +9,8 @@ style.replaceSync(`
 }
 
 #dropdown-input {
-  border: 1px solid #000000;
-  border-radius: 5px;
+  border: 1px solid #999999;
+  border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
   font-family: inherit;

@@ -4,7 +4,7 @@
     text-align: start !important;
 
     & input {
-        border-radius: .6rem;
+        border-radius: 6px;
         border: 1px solid var(--color-gray-medium);
         font-size: 16px;
     }
