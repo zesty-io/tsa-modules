@@ -5,22 +5,21 @@ import {
 } from "@storybook/addon-viewport";
 import { withConsole } from "@storybook/addon-console";
 
+// Styles
+import "../src/styles/index.css";
+import "../src/styles/variables.css";
 import "../bootstrap/bootstrap.bundle";
 import "../src/styles/scss/bootstrap.scss";
-import "../src/styles/variables.css";
-import "../src/styles/index.css";
 
+// Modules
 import { LocalNeedModule } from "../src/modules/local-need/local-need-module";
 import { LocalNeedsModule } from "../src/modules/local-needs/local-needs-module";
 import { LightboxModule } from "../src/features/common/lightbox/lightbox-module";
 import { StatsModule } from "../src/features/common/stats/stats-module";
 import { StatsImageCardModule } from "../src/features/common/stats-image-card/stats-image-card";
-
 import { HeroModule } from "../src/features/common/hero/hero-module";
-
 import { HeaderModule } from "../src/features/common/header/header-module";
 import { HeaderLocationModule } from "../src/features/common/header-location/header-location-module";
-
 import { TSAServiceItemModule } from "../src/modules/service-item/service-item";
 import { TSAEventsSingleModule } from "../src/modules/events-single/events-single";
 import { TSAEventsListModule } from "../src/modules/events-list/events-list";
@@ -28,7 +27,6 @@ import { MapHeaderModule } from "../src/modules/map-header/map-header-module";
 import { TSAImageTextModule } from "../src/features/common/image-text/image-text";
 import { TSAImageTextRightModule } from "../src/features/common/image-text-right/image-text-right";
 import { TSAImageTextTopModule } from "../src/features/common/image-text-top/image-text-top";
-
 import { TSATextWithIconComponent } from "../src/components/text-with-icon/text-with-icon";
 import { SwitchComponent } from "../src/components/switch/switch";
 import { SearchBarModule } from "../src/modules/search-bar/search-bar-module";
@@ -54,110 +52,85 @@ import { ImageTextBoxListModule } from "../src/modules/image-text-box-list/image
 import { ReadMoreCardModule } from "../src/modules/read-more-card/read-more-card";
 import { ReadMoreCardListModule } from "../src/modules/read-more-card-list/read-more-card-list";
 import { FindHelpModule } from "../src/modules/find-help-modal/find-help-modal";
-
 import { MainWaysToGiveModule } from "../src/features/ways-to-give/main-ways-to-give/main-ways-to-give";
 import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-ways-to-give/more-ways-to-give";
 
-// *** Common ***
+// Common Modules
 import { HeaderLocationIndicatorModule } from "../src/features/common/header-location-indicator/header-location-indicator";
 import { HeaderSearchModule } from "../src/features/common/header-search/header-search";
 import { FindCTAModule } from "../src/features/common/find-cta-flow/find-cta-flow";
 
-// *** National ***
-// Contacts
+// National Modules
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
 import { ContactUsModule } from "../src/features/national/contact/contact-us/contact-us";
-
-// Corporate Partnership
 import { PartnershipOpportunitiesHeaderModule } from "../src/features/national/corporate-sponsorships/partnership-opportunities/partnership";
 import { PartnershipOpportunitiesCardModule } from "../src/features/national/corporate-sponsorships/corporate-sponsorship-card/partnership-card";
 
-// *** Territories / Division ***
-
-// Sector Template
+// Territories / Division Modules
 import { AnnualReportModule } from "../src/features/territories/sector/annual-reports/annual-report";
 import { ServiceCardModule } from "../src/features/territories/sector/service-card/service-card";
-
-// Our Team
 import { TeamCardModule } from "../src/features/territories/our-team/team-card/team-card";
 
-customElements.define("hero-module", HeroModule);
-customElements.define("local-need-module", LocalNeedModule);
-customElements.define("local-needs-module", LocalNeedsModule);
-customElements.define("stats-module", StatsModule);
-customElements.define("stat-image-card-module", StatsImageCardModule);
-customElements.define("lightbox-module", LightboxModule);
-customElements.define("header-module", HeaderModule);
-customElements.define("header-location-module", HeaderLocationModule);
-customElements.define("tsa-image-text-module", TSAImageTextModule);
-customElements.define("tsa-image-text-right-module", TSAImageTextRightModule);
+// Define custom elements
+const customElementsMap = {
+	"hero-module": HeroModule,
+	"local-need-module": LocalNeedModule,
+	"local-needs-module": LocalNeedsModule,
+	"stats-module": StatsModule,
+	"stat-image-card-module": StatsImageCardModule,
+	"lightbox-module": LightboxModule,
+	"header-module": HeaderModule,
+	"header-location-module": HeaderLocationModule,
+	"tsa-image-text-module": TSAImageTextModule,
+	"tsa-image-text-right-module": TSAImageTextRightModule,
+	"tsa-image-text-top-module": TSAImageTextTopModule,
+	"tsa-text-with-icon": TSATextWithIconComponent,
+	"tsa-switch": SwitchComponent,
+	"search-bar": SearchBarModule,
+	"stats-number": StatsNumberModule,
+	"tsa-select": SelectModule,
+	"tsa-services": TSAServicesModule,
+	"tsa-stories-single": TSAStoriesSingleModule,
+	"tsa-dropdown-item": DropdownItemComponent,
+	"service-item": TSAServiceItemModule,
+	"accordion-item": AccordionItemComponent,
+	"tsa-events-single": TSAEventsSingleModule,
+	"tsa-events-list": TSAEventsListModule,
+	"tsa-paginated-list": PaginatedListModule,
+	"tsa-stories": StoriesModule,
+	"tsa-image-text-list": ImageTextListModule,
+	"tsa-news-archive-header": NewsArchiveHeaderModule,
+	"tsa-hero-text": HeroTextModule,
+	"tsa-event-detail": EventsSingleDetailModule,
+	"tsa-event-single-content": EventSingleContentModule,
+	"tsa-event-single-header": EventSingleHeaderModule,
+	"tsa-other-events": TSAOtherEventsListModule,
+	"tsa-main-ways-to-give": MainWaysToGiveModule,
+	"tsa-more-ways-to-give-accordion": MoreWayToGiveAccordionModule,
+	"tsa-jump-to-section": TSAJumpToSectionModule,
+	"tsa-text-with-icon-list": TextWithIconListModule,
+	"tsa-image-text-box": ImageBoxTextModule,
+	"tsa-image-text-box-list": ImageTextBoxListModule,
+	"read-more-card": ReadMoreCardModule,
+	"tsa-read-more-card-list": ReadMoreCardListModule,
+	"tsa-find-help": FindHelpModule,
+	"map-header-module": MapHeaderModule,
+	"tsa-header-location-indicator": HeaderLocationIndicatorModule,
+	"tsa-header-search": HeaderSearchModule,
+	"tsa-find-cta": FindCTAModule,
+	"tsa-contact-hq": ContactHQModule,
+	"tsa-contact-us": ContactUsModule,
+	"tsa-partnership": PartnershipOpportunitiesHeaderModule,
+	"tsa-partnership-card": PartnershipOpportunitiesCardModule,
+	"tsa-annual-reports": AnnualReportModule,
+	"tsa-service-card": ServiceCardModule,
+	"tsa-team-card": TeamCardModule,
+};
 
-customElements.define("tsa-text-with-icon", TSATextWithIconComponent);
-customElements.define("tsa-switch", SwitchComponent);
-customElements.define("search-bar", SearchBarModule);
-customElements.define("stats-number", StatsNumberModule);
-customElements.define("tsa-select", SelectModule);
-customElements.define("tsa-services", TSAServicesModule);
-customElements.define("tsa-stories-single", TSAStoriesSingleModule);
-customElements.define("tsa-dropdown-item", DropdownItemComponent);
-customElements.define("service-item", TSAServiceItemModule);
-customElements.define("accordion-item", AccordionItemComponent);
-customElements.define("tsa-events-single", TSAEventsSingleModule);
-customElements.define("tsa-events-list", TSAEventsListModule);
-customElements.define("tsa-paginated-list", PaginatedListModule);
-customElements.define("tsa-stories", StoriesModule);
-customElements.define("tsa-image-text-top-module", TSAImageTextTopModule);
-customElements.define("tsa-image-text-list", ImageTextListModule);
-customElements.define("tsa-news-archive-header", NewsArchiveHeaderModule);
-customElements.define("tsa-hero-text", HeroTextModule);
-customElements.define("tsa-event-detail", EventsSingleDetailModule);
-customElements.define("tsa-event-single-content", EventSingleContentModule);
-customElements.define("tsa-event-single-header", EventSingleHeaderModule);
-customElements.define("tsa-other-events", TSAOtherEventsListModule);
-customElements.define("tsa-main-ways-to-give", MainWaysToGiveModule);
-customElements.define(
-	"tsa-more-ways-to-give-accordion",
-	MoreWayToGiveAccordionModule,
-);
-customElements.define("tsa-jump-to-section", TSAJumpToSectionModule);
-customElements.define("tsa-text-with-icon-list", TextWithIconListModule);
-customElements.define("tsa-image-text-box", ImageBoxTextModule);
-customElements.define("tsa-image-text-box-list", ImageTextBoxListModule);
-customElements.define("read-more-card", ReadMoreCardModule);
-customElements.define("tsa-read-more-card-list", ReadMoreCardListModule);
-customElements.define("tsa-find-help", FindHelpModule);
-
-customElements.define("map-header-module", MapHeaderModule);
-
-// *** Common ***
-customElements.define(
-	"tsa-header-location-indicator",
-	HeaderLocationIndicatorModule,
-);
-customElements.define("tsa-header-search", HeaderSearchModule);
-customElements.define("tsa-find-cta", FindCTAModule);
-
-// *** National ***
-// Contact
-customElements.define("tsa-contact-hq", ContactHQModule);
-customElements.define("tsa-contact-us", ContactUsModule);
-
-// Corporate Partnership
-customElements.define("tsa-partnership", PartnershipOpportunitiesHeaderModule);
-customElements.define(
-	"tsa-partnership-card",
-	PartnershipOpportunitiesCardModule,
-);
-
-// *** Territories / Divisions
-
-// Sector Template
-customElements.define("tsa-annual-reports", AnnualReportModule);
-customElements.define("tsa-service-card", ServiceCardModule);
-
-// Our Team
-customElements.define("tsa-team-card", TeamCardModule);
-// register();
+// biome-ignore lint/complexity/noForEach: This is only for showing the modules
+Object.entries(customElementsMap).forEach(([tagName, module]) => {
+	customElements.define(tagName, module);
+});
 
 const preview: Preview = {
 	parameters: {
