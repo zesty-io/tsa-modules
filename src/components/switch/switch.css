@@ -31,7 +31,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        font-size: .8rem;
+        font-size: 13px;
         font-weight: 600;
         color: var(--color-gray);
 
@@ -54,7 +54,7 @@
 }
 
 .tsa-switch[toggled] .tsa-switch__thumb {
-    left: 2.7rem;
+    left: 2.76rem;
 }
 
 .tsa-switch[toggled] .tsa-switch__label {
