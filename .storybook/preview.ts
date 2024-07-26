@@ -59,6 +59,7 @@ import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-
 import { HeaderLocationIndicatorModule } from "../src/features/common/header-location-indicator/header-location-indicator";
 import { HeaderSearchModule } from "../src/features/common/header-search/header-search";
 import { FindCTAModule } from "../src/features/common/find-cta-flow/find-cta-flow";
+import { Footer, FooterModule } from "../src/features/common/footer/footer";
 
 // National Modules
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -125,6 +126,7 @@ const customElementsMap = {
 	"tsa-annual-reports": AnnualReportModule,
 	"tsa-service-card": ServiceCardModule,
 	"tsa-team-card": TeamCardModule,
+	"tsa-footer": FooterModule,
 };
 
 // biome-ignore lint/complexity/noForEach: This is only for showing the modules
