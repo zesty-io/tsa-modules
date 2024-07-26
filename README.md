@@ -1,6 +1,6 @@
 # TSA Modules
 
-This guide will walk you through the steps to publish your Storybook in Chromatic.
+This guide will walk you through the steps to publish Storybook in Chromatic.
 
 ## Prerequisites
 
