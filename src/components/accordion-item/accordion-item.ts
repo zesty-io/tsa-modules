@@ -91,7 +91,7 @@ export class AccordionItemComponent extends HTMLElement {
         <div class="accordion-header">
           <div>
             <h4>${this.header}</h4>
-            <span>${this.subtext}</span>
+            <span>${this.subtext ? this.subtext : ''}</span>
           </div>
           <div class="accordion-toggle">
             <span class="line-1"></span>

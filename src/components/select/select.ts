@@ -319,8 +319,8 @@ export class SelectModule extends HTMLElement {
 
 		template.innerHTML = `
       <div id="dropdown" class="dropdown">
-        <label for="dropdown-input" class="dropdown__label">${this.label}</label>
-        <input class="input--large" type="text" id="dropdown-input" placeholder="${this.placeholder}" readonly>
+        <label for="dropdown-input" class="dropdown__label">${this.label ? this.label : ''}</label>
+        <input class="input--large" type="text" id="dropdown-input" placeholder="${this.placeholder ? this.placeholder : ''}" readonly>
         <div id="dropdown-menu" class="dropdown-menu">
           ${optionsHTML}
           <div class="dropdown-buttons">

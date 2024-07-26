@@ -6,6 +6,7 @@ export class ReadMoreCardModule extends HTMLElement {
   private content: string | null;
   private link: string | null;
   private intro: string | null;
+  private subheading: string | null;
 
   constructor() {
     super();
@@ -14,6 +15,7 @@ export class ReadMoreCardModule extends HTMLElement {
     this.content = this.getAttribute('content');
     this.link = this.getAttribute('link');
     this.intro = this.getAttribute('intro');
+    this.subheading = this.getAttribute('subheading')
   }
 
   connectedCallback() {
@@ -27,6 +29,7 @@ export class ReadMoreCardModule extends HTMLElement {
               </div>
               <div class="card__content">
                 <h3>${this.heading}</h3>
+                <span class="card__subheading">${this.subheading ? this.subheading : ''}</span>
                 <div class="card__text">${this.intro}</div> 
               </div>
               <div class="card__link">
@@ -38,6 +41,7 @@ export class ReadMoreCardModule extends HTMLElement {
             <div class="tsa-card">
               <div class="card__content">
                 <h3>${this.heading}</h3>
+                <span class="card__subheading">${this.subheading ? this.subheading : ''}</span>
                 <div class="card__text">${this.content}</div>
               </div>
               <div class="card__link">
@@ -71,6 +75,6 @@ export interface ReadMoreCardProps {
 
 export const ReadMoreCard = ({ imgUrl, heading, content, link, intro }: ReadMoreCardProps) => {
   return `
-   <read-more-card imgUrl="${imgUrl}" heading="${heading}" content="${content}" link="${link}" intro="${intro}"></read-more-card>
+   <read-more-card imgUrl="${imgUrl}" heading="${heading}" subheading="Position Title" content="${content}" link="${link}" intro="${intro}"></read-more-card>
   `;
 };
