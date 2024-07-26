@@ -104,16 +104,13 @@ export const Footer = ({
     ${socialLinks
 			?.map(
 				({ url, icon }) => `
-      <tsa-social-link data-icon="${icon}" data-url="${url}"></tsa-social-link>
-    `,
+      <tsa-social-link data-icon="${icon}" data-url="${url}"></tsa-social-link>`,
 			)
 			.join("")}
-
     ${navigationLinks
 			?.map(
 				({ url, name }) => `
-				<a class="navigation-link link-underline-opacity-0 link-dark" href="${url}">${name}</a>
-    `,
+				<a class="navigation-link link-underline-opacity-0 link-dark" href="${url}">${name}</a>`,
 			)
 			.join("")}
   </tsa-footer>

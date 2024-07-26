@@ -9,7 +9,7 @@
 		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"chromatic": "chromatic --exit-zero-on-changes"
+		"chromatic": "chromatic --exit-zero-on-changes --project-token=chpt_afe4ab51a37a518"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "1.3.2",
