@@ -55,11 +55,14 @@ import { FindHelpModule } from "../src/modules/find-help-modal/find-help-modal";
 import { MainWaysToGiveModule } from "../src/features/ways-to-give/main-ways-to-give/main-ways-to-give";
 import { MoreWayToGiveAccordionModule } from "../src/features/ways-to-give/more-ways-to-give/more-ways-to-give";
 
+// Components
+import { SocialLinkComponent } from "../src/components/social-link/social-link";
+
 // Common Modules
 import { HeaderLocationIndicatorModule } from "../src/features/common/header-location-indicator/header-location-indicator";
 import { HeaderSearchModule } from "../src/features/common/header-search/header-search";
 import { FindCTAModule } from "../src/features/common/find-cta-flow/find-cta-flow";
-import { Footer, FooterModule } from "../src/features/common/footer/footer";
+import { FooterModule } from "../src/features/common/footer/footer";
 
 // National Modules
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -127,6 +130,7 @@ const customElementsMap = {
 	"tsa-service-card": ServiceCardModule,
 	"tsa-team-card": TeamCardModule,
 	"tsa-footer": FooterModule,
+	"tsa-social-link": SocialLinkComponent,
 };
 
 // biome-ignore lint/complexity/noForEach: This is only for showing the modules
