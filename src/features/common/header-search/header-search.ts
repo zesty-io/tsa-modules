@@ -6,6 +6,7 @@ export class HeaderSearchModule extends HTMLElement {
         <div class="p-3">
           <div class="tsa-header-search">
             <label class="input">
+                <span>Site Search</span>
                 <i class="bi bi-search"></i>
                 <input class="input--small" name="" value="" placeholder="What are you looking for" type="text"/>
             </label>
