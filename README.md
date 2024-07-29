@@ -1,6 +1,6 @@
 # TSA Modules
 
-This guide will walk you through the steps to publish your Storybook in Chromatic.
+This guide will walk you through the steps to publish Storybook in Chromatic.
 
 ## Prerequisites
 
@@ -30,6 +30,6 @@ npm run chromatic
 
 ### 3. View Published Storybook
 
-After running the above command, Chromatic will build your Storybook and publish it. You can view your published Storybook through the URL provided by Chromatic in the terminal output or checking on the Chromatic admin panel.
+After running the above command, Chromatic will build Storybook and publish it. You can view your published Storybook through the URL provided by Chromatic in the terminal output or checking on the Chromatic admin panel.
 
 Example link: [Storybook live site](https://66a3ab7727d12c15c5e42353-fczjvllgyt.chromatic.com/)
