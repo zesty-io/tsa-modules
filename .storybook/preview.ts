@@ -63,6 +63,7 @@ import { HeaderLocationIndicatorModule } from "../src/features/common/header-loc
 import { HeaderSearchModule } from "../src/features/common/header-search/header-search";
 import { FindCTAModule } from "../src/features/common/find-cta-flow/find-cta-flow";
 import { FooterModule } from "../src/features/common/footer/footer";
+import { HamburgerMenuModule } from "../src/features/common/hamburger-menu/hamburger-menu";
 
 // National Modules
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -135,11 +136,12 @@ const customElementsMap = {
 	"tsa-social-link": SocialLinkComponent,
 	"tsa-team-preview": TeamPreviewModule,
 	"tsa-ways-to-help": WaysToHelpModule,
+	"tsa-burger-menu": HamburgerMenuModule,
 };
 
 // biome-ignore lint/complexity/noForEach: This is only for showing the modules
 Object.entries(customElementsMap).forEach(([tagName, module]) => {
-	customElements.define(tagName, module);
+	if (!customElements.get(tagName)) customElements.define(tagName, module);
 });
 
 const preview: Preview = {
