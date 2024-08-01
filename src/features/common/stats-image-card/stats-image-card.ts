@@ -1,4 +1,4 @@
-import './stat-image-card.scss';
+import "./stat-image-card.scss";
 
 const styles = new CSSStyleSheet();
 
@@ -12,9 +12,9 @@ styles.replaceSync(`
         }
 
         & .stat-image-card__header{
-            margin: 2rem 0;
+            margin: 20px 0;
             & h1{
-                font-size: 2rem;
+                font-size: 20px;
                 margin: 0;
             }
         }
@@ -22,19 +22,19 @@ styles.replaceSync(`
 `);
 
 export class StatsImageCardModule extends HTMLElement {
-  constructor() {
-    super();
+	constructor() {
+		super();
 
-    this.attachShadow({ mode: 'open' });
-  }
+		this.attachShadow({ mode: "open" });
+	}
 
-  connectedCallback() {
-    const title = this.getAttribute('title');
-    const imageUrl = this.getAttribute('imageUrl');
+	connectedCallback() {
+		const title = this.getAttribute("title");
+		const imageUrl = this.getAttribute("imageUrl");
 
-    if (this.shadowRoot) {
-      this.shadowRoot.adoptedStyleSheets = [styles];
-      this.shadowRoot.innerHTML = `
+		if (this.shadowRoot) {
+			this.shadowRoot.adoptedStyleSheets = [styles];
+			this.shadowRoot.innerHTML = `
       <div class="stat-image-card">
         <div class="stat-image-card__img">
             <img src="${imageUrl}" />
@@ -47,18 +47,22 @@ export class StatsImageCardModule extends HTMLElement {
         </div>
       </div>
       `;
-    }
-  }
+		}
+	}
 }
 
 export interface StatImageCardProps {
-  title: string;
-  imageUrl: string;
-  content: string;
+	title: string;
+	imageUrl: string;
+	content: string;
 }
 
-export const StatImageCard = ({ title, imageUrl, content }: StatImageCardProps) => {
-  return `
+export const StatImageCard = ({
+	title,
+	imageUrl,
+	content,
+}: StatImageCardProps) => {
+	return `
     <stat-image-card-module title="${title}" imageUrl="${imageUrl}">
         <p id="stat-content">${content}</p>
     </stat-image-card-module>

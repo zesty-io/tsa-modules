@@ -1,4 +1,4 @@
-import './stats-module.scss';
+import "./stats-module.scss";
 
 const styles = new CSSStyleSheet();
 
@@ -10,7 +10,7 @@ styles.replaceSync(`
             margin-bottom: 4rem;
             & h1{
                 margin:0;
-                font-size: 2.8rem;
+                font-size: 28px;
                 font-family: "Cinzel", serif;
                 font-weight: 200;
                 text-align: center;
@@ -21,18 +21,18 @@ styles.replaceSync(`
 `);
 
 export class StatsModule extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-  }
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
 
-  connectedCallback() {
-    const title = this.getAttribute('title');
+	connectedCallback() {
+		const title = this.getAttribute("title");
 
-    if (this.shadowRoot) {
-      this.shadowRoot.adoptedStyleSheets = [styles];
+		if (this.shadowRoot) {
+			this.shadowRoot.adoptedStyleSheets = [styles];
 
-      this.shadowRoot.innerHTML = `
+			this.shadowRoot.innerHTML = `
         <div class="stats">
             <div class="stats__header">
                 <h1>${title}</h1>
@@ -43,16 +43,16 @@ export class StatsModule extends HTMLElement {
             </div>
         </div>
       `;
-    }
-  }
+		}
+	}
 }
 
 export interface StatsProps {
-  title: string;
+	title: string;
 }
 
 export const Stats = ({ title }: StatsProps) => {
-  return `
+	return `
         <stats-module title ="${title}">
             <div slot="content">
                 <div id="content">
@@ -68,7 +68,7 @@ export const Stats = ({ title }: StatsProps) => {
                 </div>
                 
                 <div id="cta">
-                    <button type="button" class="btn btn--small btn--dark--outline">[FPO] Learn More</button>
+                    <button type="button" class="btn btn-dark">[FPO] Learn More</button>
                 </div>
             </div>
         </stats-module>
