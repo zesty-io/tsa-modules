@@ -1,0 +1,12 @@
+.accordion {
+  --bs-accordion-active-bg: #fff;
+  --bs-accordion-active-color: #000;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+.accordion-flush > .accordion-item:last-child {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+#hamburgerLinksContainer:last-child {
+  border-bottom: 1px solid var(--bs-border-color);
+}

@@ -149,5 +149,6 @@ export const Footer = ({
 			)
 			.join("")}
   </tsa-footer>
+  
 `;
 };
