@@ -18,6 +18,7 @@ styles.replaceSync(`
     
     svg{
         margin-right: .5rem;
+        margin-top: .1rem;
         transform: scale(1.1);
     }
     
@@ -25,7 +26,6 @@ styles.replaceSync(`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: .2rem;
         margin-right: auto;
     
         & .title{
@@ -37,7 +37,7 @@ styles.replaceSync(`
 
         & .divider{
             background-color: #FFF;
-            height: .8rem;
+            height: .9rem;
             width: 1px;
             margin: 0 .5rem;
         }
@@ -50,7 +50,8 @@ styles.replaceSync(`
         }
 
         & .subtitle-container{
-            display:flex
+            display:flex;
+            align-items: center;
         }
     }
     
@@ -104,7 +105,7 @@ export interface HeaderLocationProps {
 
 export const HeaderLocation = ({ title, location }: HeaderLocationProps) => {
 	return `<header-location-module data-title="${title}" data-location="${location}">
-    <ul class="d-flex align-items-center">
+    <ul class="d-flex align-items-center mb-0">
          <li class="nav-item dropdown me-8">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Our Services
