@@ -27,8 +27,7 @@
 }
 
 @media (min-width: 1280px) {
-  .employee-card h1,
-  span {
+  .employee-card h1 + span {
     font-size: 2rem;
   }
 }
