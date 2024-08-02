@@ -1,0 +1,35 @@
+/* Base class */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Responsive utility classes */
+@include media-breakpoint-up(sm) {
+  .text-sm-balance {
+    text-wrap: balance;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text-md-balance {
+    text-wrap: balance;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-lg-balance {
+    text-wrap: balance;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .text-xl-balance {
+    text-wrap: balance;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .text-xxl-balance {
+    text-wrap: balance;
+  }
+}
