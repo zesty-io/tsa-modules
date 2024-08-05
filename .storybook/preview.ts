@@ -65,6 +65,7 @@ import { FindCTAModule } from "../src/features/common/find-cta-flow/find-cta-flo
 import { FooterModule } from "../src/features/common/footer/footer";
 import { HamburgerMenuModule } from "../src/features/common/hamburger-menu/hamburger-menu";
 import { MissionStatementModule } from "../src/features/common/mission-statement/mission-statement";
+import { StatCardComponent } from "../src/features/common/stat-card/stat-card";
 
 // National Modules
 import { ContactHQModule } from "../src/features/national/contact/contact-hq/contact-hq";
@@ -139,6 +140,7 @@ const customElementsMap = {
 	"tsa-ways-to-help": WaysToHelpModule,
 	"tsa-burger-menu": HamburgerMenuModule,
 	"tsa-mission-statement": MissionStatementModule,
+	"tsa-stat-card": StatCardComponent,
 };
 
 // biome-ignore lint/complexity/noForEach: This is only for showing the modules
