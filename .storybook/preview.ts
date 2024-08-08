@@ -76,9 +76,7 @@ import { PartnershipOpportunitiesCardModule } from "../src/features/national/cor
 // Territories / Division Modules
 import { AnnualReportModule } from "../src/features/territories/sector/annual-reports/annual-report";
 import { ServiceCardModule } from "../src/features/territories/sector/service-card/service-card";
-import { TeamCardModule } from "../src/features/territories/our-team/team-card/team-card";
 import { TeamPreviewModule } from "../src/features/territories/sawso-homepage/sawso-team-preview/sawso-team-preview";
-import { WaysToHelpModule } from "../src/features/territories/sawso-homepage/ways-we-help/ways-we-help";
 
 // Define custom elements
 const customElementsMap = {
@@ -133,11 +131,9 @@ const customElementsMap = {
 	"tsa-partnership-card": PartnershipOpportunitiesCardModule,
 	"tsa-annual-reports": AnnualReportModule,
 	"tsa-service-card": ServiceCardModule,
-	"tsa-team-card": TeamCardModule,
 	"tsa-footer": FooterModule,
 	"tsa-social-link": SocialLinkComponent,
 	"tsa-team-preview": TeamPreviewModule,
-	"tsa-ways-to-help": WaysToHelpModule,
 	"tsa-burger-menu": HamburgerMenuModule,
 	"tsa-mission-statement": MissionStatementModule,
 	"tsa-stat-card": StatCardComponent,
