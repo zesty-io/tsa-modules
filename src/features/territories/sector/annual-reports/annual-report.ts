@@ -1,6 +1,6 @@
 export class AnnualReportModule extends HTMLElement {
 	connectedCallback() {
-		this.innerHTML = `
+		this.innerHTML = /*HTML*/ `
             <div class="p-10">
                 <div class="mb-8">
                     <h1 class="tsa-title mb-6">${this.getAttribute("data-title")}</h1>
@@ -14,7 +14,7 @@ export class AnnualReportModule extends HTMLElement {
 
                     <div class="d-md-flex align-items-center justify-content-center flex-column col-md-6 order-md-0">
                         <h2 class="fw-semibold fs-1 mb-6">${this.getAttribute("data-year")}</h2>
-                        <button class="btn btn--medium btn--dark--fill">${this.getAttribute("data-year-btn")}</button>
+                        <button class="btn btn-dark">${this.getAttribute("data-year-btn")}</button>
                     </div>
                 </div>
             </div>
@@ -22,10 +22,14 @@ export class AnnualReportModule extends HTMLElement {
 	}
 }
 
+// TODO: Insert report component
 export const AnnualReport = () => {
-	return `<tsa-annual-reports data-title="World Service Office Annual Reports" 
-    data-desc="Description of annual reports  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut 
-    labore et dolore magna aliqua. Ut"
-    data-year="2023 Annual Report" data-year-btn="Read the 2023 Annual Report">
+	return /*HTML*/ `
+    <tsa-annual-reports 
+        data-title="World Service Office Annual Reports" 
+        data-desc="Description of annual reports  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut 
+                    labore et dolore magna aliqua. Ut"
+        data-year="2023 Annual Report" 
+        data-year-btn="Read the 2023 Annual Report">
     </tsa-annual-reports>`;
 };
